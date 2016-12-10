@@ -1,5 +1,7 @@
 // DEPENDENCIES
 var express = require('express');
+var bodyParser = require('body-parser');
+var methodOverride = require('method-override');
 var mongoose = require('mongoose');
 var app = express();
 
@@ -15,8 +17,9 @@ db.once('open', function() {
 
 
 // MIDDLEWARE
-
-
+app.use(methodOverride('_method'));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 
 // CONTROLLERS
@@ -29,9 +32,6 @@ app.get('/', function(req, res){
     // res.send('hello!');
     res.render('./index.ejs');
 });
-
-
-
 
 
 // LISTENER

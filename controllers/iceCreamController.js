@@ -7,6 +7,16 @@ var IceCream = require('../models/icecreams.js');
 
 //////// ROUTES
 
+// INDEX
+router.get('/', function(req, res){
+    IceCream.find({}, function(err, foundIceCreams){
+        if(err) { console.log(err) }
+        // res.send('list of flavors');
+        res.render('icecreams/index.ejs', {
+            allIceCreams: foundIceCreams
+        });
+    });
+});
 
 // EXPORT
 module.exports = router;
