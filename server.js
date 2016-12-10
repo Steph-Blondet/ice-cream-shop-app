@@ -5,6 +5,11 @@ var methodOverride = require('method-override');
 var mongoose = require('mongoose');
 var app = express();
 
+// MIDDLEWARE
+app.use(methodOverride('_method'));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 // CONTROLLERS
 var iceCreamController = require('./controllers/iceCreamController.js')
 app.use('/icecreams', iceCreamController);
@@ -22,11 +27,6 @@ db.once('open', function() {
     console.log('connected to mongo');
 });
 
-
-// MIDDLEWARE
-app.use(methodOverride('_method'));
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
 
 
 // ROOT ROUTE
