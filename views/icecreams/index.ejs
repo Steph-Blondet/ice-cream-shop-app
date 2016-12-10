@@ -22,12 +22,9 @@
         <main>
             <h1>Flavors</h1>
             <ul>
-                <li><a href="#">Vanilla</a></li>
-                <li><a href="#">Chocolate</a></li>
-                <li><a href="#">Strawberry</a></li>
-                <li><a href="#">Chocolate Chips</a></li>
-                <li><a href="#">Salted Caramel</a></li>
-                <li><a href="#">Cookies and Cream</a></li>
+                <% for (var i=0; i<allIceCreams.length; i++) { %>
+                    <h2><a href="/icecreams/<%=i%>"><%=allIceCreams[i].flavor%></a></h2>
+                <% } %>
             </ul>
         </main>
 
