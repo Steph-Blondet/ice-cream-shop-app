@@ -2,10 +2,9 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>User's Page</title>
+        <title>Edit User Profile</title>
     </head>
     <body>
-
         <header>
             <nav>
                 <ul>
@@ -19,17 +18,11 @@
         </header>
 
         <main>
-            <h1>Show Page for <%=user.username%></h1>
-            <p><a href="/users/<%=user._id%>/edit">Edit User Profile</a></p>
-            <p><a href="/new">Add New Ice Cream</a></p>
+            <h1>Edit Profile Page for <%=user.username%></h1>
 
-            <h2>My Ice Cream Creations</h2>
-            <ul>
-
-			</ul>
-
-            <form action="/users/<%=user._id%>?_method=DELETE" method="POST">
-                <input type="submit" value="Delete User">
+            <form action="/users/<%=user._id%>?_method=PUT" method="POST">
+                <input type="text" name="username" value="<%=user.username%>"/><br/>
+                <input type="submit" value="Update User"/>
             </form>
         </main>
 

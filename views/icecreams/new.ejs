@@ -5,6 +5,42 @@
         <title>Ice Cream Creation</title>
     </head>
     <body>
+        <h1>Create Your Own Ice Cream</h1>
+
+        <form action="/users/<%=users._id%>" method="POST">
+            <h3>Choose your flavor</h3>
+            <select name="myFlavor">
+                <option value="none"></option>
+                <option value="vanilla">Vanilla</option>
+                <option value="chocolate">Chocolate</option>
+                <option value="strawberry">Strawberry</option>
+                <option value="cookiesandcream">Cookies and Cream</option>
+                <option value="saltedcaramel">Salted Caramel</option>
+                <option value="chocolatechip">Chocolate Chip</option>
+            </select>
+
+            <h3>Choose your toppings</h3>
+            <select name="myToppings">
+                <option value="none"></option>
+                <option value="cookiedough">Cookie Dough</option>
+                <option value="oreocookies">Oreo Cookies</option>
+                <option value="chocolatechips">Chocolate Chips</option>
+                <option value="sprinkles">Sprinkles</option>
+                <option value="gummybears">Gummy Bears</option>
+                <option value="brownie">Brownie</option>
+            </select>
+
+            <h3>Choose your sauces</h3>
+            <select name="mySauces">
+                <option value="none"></option>
+                <option value="hotfudge">Hot Fudge</option>
+                <option value="caramelsauce">Caramel Sauce</option>
+                <option value="strawberrysauce">Strawberry Sauce</option>
+                <option value="whippedcream">Whipped Cream</option>
+            </select>
+            <br/>
+            <input type="submit" value="Create Ice Cream"/>
+        </form>
 
     </body>
 </html>

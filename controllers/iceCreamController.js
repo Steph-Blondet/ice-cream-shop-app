@@ -5,6 +5,7 @@ var router = express.Router();
 var IceCream = require('../models/icecream.js');
 
 
+
 //////// ROUTES
 
 // INDEX
@@ -18,6 +19,21 @@ router.get('/', function(req, res){
      });
 });
 
+
+// NEW
+router.get('/:id/new', function(req, res) {
+    res.render('icecreams/new.ejs');
+});
+
+
+// CREATE
+router.post('/', function(req, res){
+    IceCream.create(req.body, function(err, createdIceCream){
+        res.render('users/show.ejs', {
+            creation: createdIceCream
+        });
+    });
+});
 
 // // SHOW
 // router.get('/icecreams/:id', function(req, res){
