@@ -19,18 +19,21 @@
         </header>
 
         <main>
-            <h1>Show Page for <%=user.username%></h1>
-            <p><a href="/users/<%=user._id%>/edit">Edit User Profile</a></p>
-            <p><a href="/new">Add New Ice Cream</a></p>
+            <section>
+                <h1>Show Page for <%=user.username%></h1>
+                <p><a href="/users/<%=user._id%>/edit">Edit User Profile</a></p>
+            </section>
 
-            <h2>My Ice Cream Creations</h2>
-            <ul>
+            <section>
+                <h1>My Ice Cream Creations</h1>
+            </section>
 
-			</ul>
+            <section>
+                <form action="/users/<%=user._id%>?_method=DELETE" method="POST">
+                    <input type="submit" value="Delete User">
+                </form>
+            </section>
 
-            <form action="/users/<%=user._id%>?_method=DELETE" method="POST">
-                <input type="submit" value="Delete User">
-            </form>
         </main>
 
     </body>

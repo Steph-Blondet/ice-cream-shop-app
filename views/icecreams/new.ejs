@@ -7,7 +7,11 @@
     <body>
         <h1>Create Your Own Ice Cream</h1>
 
-        <form action="/users/<%=users._id%>" method="POST">
+        <form action="/icecreams" method="POST">
+
+            <h3>Name of Creation</h3>
+            <input type="text" name="nameOfCreation" value="Name of Creation"/><br/>
+
             <h3>Choose your flavor</h3>
             <select name="myFlavor">
                 <option value="none"></option>

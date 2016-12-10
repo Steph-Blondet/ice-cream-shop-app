@@ -12,7 +12,7 @@
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="#">About</a></li>
-                    <li><a href="#">Ice Creams</a></li>
+                    <li><a href="/icecreams">Ice Creams</a></li>
                     <li><a href="#">Location</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
@@ -34,12 +34,14 @@
 
             <section>
                 <h1>Creations</h1>
-                <ul>
-                    <% for (var i=0; i<allIceCreams.length; i++) { %>
-                        <li><%=allIceCreams[i].flavor%></li>
-                    <% } %>
-                </ul>
+                <p><a href="../icecreams/new">Add Ice Cream</a></p>
+                    <ul>
+                        <% for(var i=0; i <allIceCreams.length; i++){ %>
+        				    <li><a href="/icecreams/<%=allIceCreams[i]._id%>"><%=allIceCreams[i].flavor%></a></li>
+        			    <% } %>
+                    </ul>
             </section>
+
 
         </main>
 

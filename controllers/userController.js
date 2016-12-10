@@ -8,8 +8,8 @@ var IceCream = require('../models/icecream.js');
 
 //////// ROUTES
 // INDEX
-router.get('/', function(req, res){
-    User.find({}, function(err, foundUsers){
+router.get('/', function(req, res) {
+    User.find({}, function(err, foundUsers) {
         res.render('users/index.ejs', {
             usersAll: foundUsers
         });
@@ -19,22 +19,21 @@ router.get('/', function(req, res){
 
 // NEW
 router.get('/new', function(req, res) {
-    // res.send('hello?');
     res.render('users/new.ejs');
 });
 
 
 // CREATE
-router.post('/', function(req, res){
-    User.create(req.body, function(err, createdUser){
+router.post('/', function(req, res) {
+    User.create(req.body, function(err, createdUser) {
         res.redirect('/users');
     });
 });
 
 
 // SHOW
-router.get('/:id', function(req, res){
-    User.findById(req.params.id, function(err, foundUser){
+router.get('/:id', function(req, res) {
+    User.findById(req.params.id, function(err, foundUser) {
         res.render('users/show.ejs', {
             user: foundUser
         });
@@ -44,8 +43,8 @@ router.get('/:id', function(req, res){
 
 // UPDATE
 router.put('/:id', function(req, res) {
-    User.findByIdAndUpdate(req.params.id, req.body, { new: true}, function(err, updatedUser) {
-        console.log(updatedUser);
+    User.findByIdAndUpdate(req.params.id, req.body, { new: true }, function(err, updatedUser) {
+        // console.log(updatedUser);
         res.render('users/show.ejs', {
             user: updatedUser
         });
@@ -55,8 +54,8 @@ router.put('/:id', function(req, res) {
 
 // EDIT
 router.get('/:id/edit', function(req, res) {
-    User.findById(req.params.id, function(err, foundUser){
-        console.log(foundUser);
+    User.findById(req.params.id, function(err, foundUser) {
+        // console.log(foundUser);
         res.render('users/edit.ejs', {
             user: foundUser
         });
@@ -66,7 +65,7 @@ router.get('/:id/edit', function(req, res) {
 
 // DELETE
 router.delete('/:id', function(req, res){
-    User.findByIdAndRemove(req.params.id, function(){
+    User.findByIdAndRemove(req.params.id, function() {
         res.redirect('/users');
     });
 });
