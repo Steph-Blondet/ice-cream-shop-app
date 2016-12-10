@@ -45,9 +45,9 @@ router.get('/:id', function(req, res) {
 
 // UPDATE
 router.put('/:id', function(req, res) {
-    User.findByIdAndUpdate(req.params.id, req.body, { new: true }, function(err, updatedIceCream) {
+    IceCream.findByIdAndUpdate(req.params.id, req.body, { new: true }, function(err, updatedIceCream) {
         // console.log(updatedUser);
-        res.render('users/show.ejs', {
+        res.render('icecreams/show.ejs', {
             icecream: updatedIceCream
         });
     });
@@ -66,7 +66,7 @@ router.put('/:id', function(req, res) {
 
 // DELETE
  router.delete('/:id', function(req, res){
-     User.findByIdAndRemove(req.params.id, function() {
+     IceCream.findByIdAndRemove(req.params.id, function() {
          res.redirect('/icecreams');
      });
  });
