@@ -20,12 +20,27 @@
         </header>
 
         <main>
-            <h1>Flavors</h1>
-            <ul>
-                <% for (var i=0; i<allIceCreams.length; i++) { %>
-                    <h2><a href="/icecreams/<%=i%>"><%=allIceCreams[i].flavor%></a></h2>
-                <% } %>
-            </ul>
+            <section>
+                <h1>Flavors</h1>
+                <ul>
+                    <li>Vanilla</li>
+                    <li>Chocolate</li>
+                    <li>Strawberry</li>
+                    <li>Cookies and Cream</li>
+                    <li>Salted Caramel</li>
+                    <li>Chocolate Chip</li>
+                </ul>
+            </section>
+
+            <section>
+                <h1>Creations</h1>
+                <ul>
+                    <% for (var i=0; i<allIceCreams.length; i++) { %>
+                        <li><%=allIceCreams[i].flavor%></li>
+                    <% } %>
+                </ul>
+            </section>
+
         </main>
 
         <footer>©2016 Design and Development by Stephanie Blondet</footer>
