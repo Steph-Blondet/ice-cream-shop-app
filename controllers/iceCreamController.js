@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 // MODELS
-var IceCream = require('../models/icecreams.js');
+var IceCream = require('../models/icecream.js');
 
 
 //////// ROUTES
@@ -19,14 +19,14 @@ router.get('/', function(req, res){
 });
 
 
-// SHOW
-router.get('/icecreams/:id', function(req, res){
-    IceCream.findById(req.params.id, function(err, foundIceCream){
-        res.render('icecreams/show.ejs', {
-            icecream: foundIceCream
-        });
-    });
-});
+// // SHOW
+// router.get('/icecreams/:id', function(req, res){
+//     IceCream.findById(req.params.id, function(err, foundIceCream){
+//         res.render('icecreams/show.ejs', {
+//             icecream: foundIceCream
+//         });
+//     });
+// });
 
 
 

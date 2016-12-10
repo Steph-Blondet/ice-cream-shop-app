@@ -5,11 +5,16 @@ var methodOverride = require('method-override');
 var mongoose = require('mongoose');
 var app = express();
 
+// CONTROLLERS
+var iceCreamController = require('./controllers/iceCreamController.js')
+app.use('/icecreams', iceCreamController);
+
+var userController = require('./controllers/userController.js');
+app.use('/users', userController);
+
 
 // DATABASE
 mongoose.connect('mongodb://localhost:27017/icecream');
-
-
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error: '));
@@ -22,11 +27,6 @@ db.once('open', function() {
 app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
-
-// CONTROLLERS
-var iceCreamController = require('./controllers/iceCreamController.js')
-app.use('/icecreams', iceCreamController);
 
 
 // ROOT ROUTE
