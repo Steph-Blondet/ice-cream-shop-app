@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Steph-Blondet/ice-cream-shop-app#readme",
   "dependencies": {
+    "ejs": "^2.5.5",
     "express": "^4.14.0",
     "mongoose": "^4.7.2"
   }

@@ -4,28 +4,33 @@ var mongoose = require('mongoose');
 var app = express();
 
 
-
 // DATABASE
 mongoose.connect('mongodb://localhost:27017/icecream');
 
-mongoose.connection.once('open', function() {
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error: '));
+db.once('open', function() {
     console.log('connected to mongo');
 });
-
-
-// CONTROLLERS
-
-
 
 // MIDDLEWARE
 
 
 
+
+// CONTROLLERS
+var iceCreamController = require('./controllers/iceCreamController.js')
+app.use('/icecreams', iceCreamController);
+
+
 // ROOT ROUTE
 app.get('/', function(req, res){
-    res.send('hello!');
-    res.render('index.ejs');
+    // res.send('hello!');
+    res.render('./index.ejs');
 });
+
+
+
 
 
 // LISTENER
