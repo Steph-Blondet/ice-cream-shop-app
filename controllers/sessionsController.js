@@ -14,12 +14,26 @@ router.get('/new', function(req, res) {
 
 
 // CREATE
-
-
+router.post('/', function(req, res) {
+    User.findOne({ username: req.body.username }, function(err, foundUser) {
+        if (req.body.password == foundUser.password) {
+            req.session.currentuser = foundUser;
+            res.render('users/show.ejs', {
+                user: foundUser
+            });
+        } else {
+            res.send('wrong password');
+        }
+    });
+});
 
 
 // DELETE (LOGOUT)
-
+router.delete('/', function(req, res) {
+    req.session.destroy(function(err) {
+        res.redirect('/');
+    });
+});
 
 
 // EXPORT

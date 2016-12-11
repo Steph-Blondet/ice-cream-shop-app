@@ -17,6 +17,7 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
+
         </header>
 
         <main>
@@ -28,7 +29,7 @@
                 <p>Flavor: <%=icecream.flavor%></p>
                 <p>Topping: <%=icecream.toppings%></p>
                 <p>Sauces: <%=icecream.sauces%></p>
-                <p>Creator: <%=user.username%></p>
+                <p>Creator: <a href="/users/<%=user._id%>"><%=user.username%></a></p>
                 <p><a href="/icecreams/<%=icecream._id%>/edit">Edit Ice Cream</a></p>
             </section>
 
