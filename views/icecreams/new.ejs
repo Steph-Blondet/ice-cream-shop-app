@@ -7,12 +7,12 @@
     <body>
         <h1>Create Your Own Ice Cream</h1>
 
-        <form action="/icecreams" method="POST">
+        <form action="/icecreams/" method="POST">
 
             <h3>Find your username</h3>
                 <select name="userId">
                     <% for(var i=0; i <users.length; i++){ %>
-                        <option value="users[i]._id%>"><%=users[i].username%></option>
+                        <option value="<%=users[i]._id%>"><%=users[i].username%></option>
                     <% } %>
                 </select>
 

@@ -14,7 +14,7 @@ router.get('/', function(req, res) {
     IceCream.find({}, function(err, foundIceCreams) {
         if(err) { console.log(err) }
         res.render('icecreams/index.ejs', {
-            allIceCreams: foundIceCreams
+            icecreams: foundIceCreams
          });
      });
 });
@@ -33,6 +33,8 @@ router.get('/new', function(req, res) {
 // CREATE
 router.post('/', function(req, res) {
     User.findById(req.body.userId, function(err, foundUser) {
+        console.log(foundUser);
+        console.log('!!!!!');
         IceCream.create(req.body, function(err, createdIceCream) {
             foundUser.icecreams.push(createdIceCream);
             foundUser.save(function(err, data) {

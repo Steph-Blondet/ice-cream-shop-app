@@ -36,8 +36,8 @@
                 <h1>Creations</h1>
                 <p><a href="../icecreams/new">Add Ice Cream</a></p>
                     <ul>
-                        <% for(var i=0; i <allIceCreams.length; i++){ %>
-        				    <li><a href="/icecreams/<%=allIceCreams[i]._id%>"><%=allIceCreams[i].nameOfCreation%></a></li>
+                        <% for(var i=0; i <icecreams.length; i++){ %>
+        				    <li><a href="/icecreams/<%=icecreams[i]._id%>"><%=icecreams[i].nameOfCreation%></a></li>
         			    <% } %>
                     </ul>
             </section>
