@@ -20,13 +20,21 @@
 
         <main>
             <section>
-                <h1>Hello <%=user.username%> !</h1>
+                <h1>Hello <%=user.username%>!</h1>
                 <p><a href="/users/<%=user._id%>/edit">Edit User Profile</a></p>
             </section>
 
             <section>
                 <h1><%=user.username%>'s Ice Cream Creations</h1>
                 <p><a href="../icecreams/new">Add Ice Cream</a></p>
+            </section>
+
+            <section>
+                <ul>
+                    <% for(var i = 0; i < user.icecreams.length; i++){ %>
+                        <li><%=user.icecreams[i].nameOfCreation%></li>
+                    <% } %>
+                </ul>
             </section>
 
             <section>

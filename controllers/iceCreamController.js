@@ -33,8 +33,6 @@ router.get('/new', function(req, res) {
 // CREATE
 router.post('/', function(req, res) {
     User.findById(req.body.userId, function(err, foundUser) {
-        console.log(foundUser);
-        console.log('!!!!!');
         IceCream.create(req.body, function(err, createdIceCream) {
             foundUser.icecreams.push(createdIceCream);
             foundUser.save(function(err, data) {
@@ -48,8 +46,11 @@ router.post('/', function(req, res) {
 // SHOW
 router.get('/:id', function(req, res) {
     IceCream.findById(req.params.id, function(err, foundIceCream){
-        res.render('icecreams/show.ejs', {
-            icecream: foundIceCream
+        User.findOne({'icecreams._id':req.params.id}, function(err, foundUser){
+            res.render('icecreams/show.ejs', {
+                user: foundUser,
+                icecream: foundIceCream
+            });
         });
     });
 });
@@ -58,9 +59,12 @@ router.get('/:id', function(req, res) {
 // UPDATE
 router.put('/:id', function(req, res) {
     IceCream.findByIdAndUpdate(req.params.id, req.body, { new: true }, function(err, updatedIceCream) {
-        // console.log(updatedUser);
-        res.render('icecreams/show.ejs', {
-            icecream: updatedIceCream
+        User.findOne({'icecreams._id':req.params.id}, function(err, foundUser) {
+            foundUser.icecreams.id(req.params.id).remove();
+            foundUser.icecreams.push(updatedIceCream);
+            foundUser.save(function(err, data) {
+                res.redirect('/icecreams/' + req.params.id);
+            });
         });
     });
 });
@@ -78,8 +82,13 @@ router.put('/:id', function(req, res) {
 
 // DELETE
  router.delete('/:id', function(req, res){
-     IceCream.findByIdAndRemove(req.params.id, function() {
-         res.redirect('/icecreams');
+     IceCream.findByIdAndRemove(req.params.id, function(err, foundIceCream) {
+        User.findOne({'icecreams._id':req.params.id}, function(err, foundUser) {
+            foundUser.icecreams.id(req.params.id).remove();
+            foundUser.save(function(err, data){
+                res.redirect('/icecreams');
+            });
+        });
      });
  });
 
