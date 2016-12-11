@@ -13,5 +13,14 @@ router.get('/new', function(req, res) {
 });
 
 
+// CREATE
+
+
+
+
+// DELETE (LOGOUT)
+
+
+
 // EXPORT
 module.exports = router;

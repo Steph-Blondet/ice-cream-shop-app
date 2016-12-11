@@ -22,6 +22,39 @@
 
             <form action="/icecreams/<%=icecream._id%>?_method=PUT" method="POST">
                 <input type="text" name="nameOfCreation" value="<%=icecream.nameOfCreation%>"/><br/>
+
+                <h3>Update your flavor</h3>
+                <select name="myFlavor">
+                    <option value="none"></option>
+                    <option value="vanilla">Vanilla</option>
+                    <option value="chocolate">Chocolate</option>
+                    <option value="strawberry">Strawberry</option>
+                    <option value="cookiesandcream">Cookies and Cream</option>
+                    <option value="saltedcaramel">Salted Caramel</option>
+                    <option value="chocolatechip">Chocolate Chip</option>
+                </select>
+
+                <h3>Update your toppings</h3>
+                <select name="myToppings">
+                    <option value="none"></option>
+                    <option value="cookiedough">Cookie Dough</option>
+                    <option value="oreocookies">Oreo Cookies</option>
+                    <option value="chocolatechips">Chocolate Chips</option>
+                    <option value="sprinkles">Sprinkles</option>
+                    <option value="gummybears">Gummy Bears</option>
+                    <option value="brownie">Brownie</option>
+                </select>
+
+                <h3>Update your sauces</h3>
+                <select name="mySauces">
+                    <option value="none"></option>
+                    <option value="hotfudge">Hot Fudge</option>
+                    <option value="caramelsauce">Caramel Sauce</option>
+                    <option value="strawberrysauce">Strawberry Sauce</option>
+                    <option value="whippedcream">Whipped Cream</option>
+                </select>
+
+
                 <input type="submit" value="Update Ice Cream"/>
             </form>
         </main>

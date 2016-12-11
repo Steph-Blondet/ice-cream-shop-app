@@ -4,7 +4,7 @@ var IceCream = require('./icecream.js');
 var userSchema = mongoose.Schema({
     username: String,
     password: String,
-    icecream: [IceCream.schema]
+    icecreams: [IceCream.schema]
 });
 
 

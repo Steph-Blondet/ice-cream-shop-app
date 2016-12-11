@@ -9,40 +9,47 @@
 
         <form action="/icecreams" method="POST">
 
+            <h3>Find your username</h3>
+                <select name="userId">
+                    <% for(var i=0; i <users.length; i++){ %>
+                        <option value="users[i]._id%>"><%=users[i].username%></option>
+                    <% } %>
+                </select>
+
             <h3>Name of Creation</h3>
-            <input type="text" name="nameOfCreation" value="Name of Creation"/><br/>
+                <input type="text" name="nameOfCreation" value="Name of Creation"/><br/>
 
             <h3>Choose your flavor</h3>
-            <select name="myFlavor">
-                <option value="none"></option>
-                <option value="vanilla">Vanilla</option>
-                <option value="chocolate">Chocolate</option>
-                <option value="strawberry">Strawberry</option>
-                <option value="cookiesandcream">Cookies and Cream</option>
-                <option value="saltedcaramel">Salted Caramel</option>
-                <option value="chocolatechip">Chocolate Chip</option>
-            </select>
+                <select name="myFlavor">
+                    <option value="none"></option>
+                    <option value="vanilla">Vanilla</option>
+                    <option value="chocolate">Chocolate</option>
+                    <option value="strawberry">Strawberry</option>
+                    <option value="cookiesandcream">Cookies and Cream</option>
+                    <option value="saltedcaramel">Salted Caramel</option>
+                    <option value="chocolatechip">Chocolate Chip</option>
+                </select>
 
             <h3>Choose your toppings</h3>
-            <select name="myToppings">
-                <option value="none"></option>
-                <option value="cookiedough">Cookie Dough</option>
-                <option value="oreocookies">Oreo Cookies</option>
-                <option value="chocolatechips">Chocolate Chips</option>
-                <option value="sprinkles">Sprinkles</option>
-                <option value="gummybears">Gummy Bears</option>
-                <option value="brownie">Brownie</option>
+                <select name="myToppings">
+                    <option value="none"></option>
+                    <option value="cookiedough">Cookie Dough</option>
+                    <option value="oreocookies">Oreo Cookies</option>
+                    <option value="chocolatechips">Chocolate Chips</option>
+                    <option value="sprinkles">Sprinkles</option>
+                    <option value="gummybears">Gummy Bears</option>
+                    <option value="brownie">Brownie</option>
             </select>
 
             <h3>Choose your sauces</h3>
-            <select name="mySauces">
-                <option value="none"></option>
-                <option value="hotfudge">Hot Fudge</option>
-                <option value="caramelsauce">Caramel Sauce</option>
-                <option value="strawberrysauce">Strawberry Sauce</option>
-                <option value="whippedcream">Whipped Cream</option>
-            </select>
-            <br/>
+                <select name="mySauces">
+                    <option value="none"></option>
+                    <option value="hotfudge">Hot Fudge</option>
+                    <option value="caramelsauce">Caramel Sauce</option>
+                    <option value="strawberrysauce">Strawberry Sauce</option>
+                    <option value="whippedcream">Whipped Cream</option>
+                </select><br/>
+
             <input type="submit" value="Create Ice Cream"/>
         </form>
 

@@ -12,6 +12,12 @@ app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+app.use(session ({
+    secret: "this is secret",
+    resave: false,
+    saveUninitialized: false
+}));
+
 
 // CONTROLLERS
 var userController = require('./controllers/userController.js');

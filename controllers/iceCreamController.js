@@ -2,8 +2,9 @@ var express = require('express');
 var router = express.Router();
 
 // MODELS
-var IceCream = require('../models/icecream.js');
 var User = require('../models/user.js');
+var IceCream = require('../models/icecream.js');
+
 
 
 //////// ROUTES
@@ -21,14 +22,23 @@ router.get('/', function(req, res) {
 
 // NEW
 router.get('/new', function(req, res) {
-    res.render('icecreams/new.ejs');
+    User.find({}, function(err, allUsers) {
+        res.render('icecreams/new.ejs', {
+            users: allUsers
+        });
+    });
 });
 
 
 // CREATE
 router.post('/', function(req, res) {
-	IceCream.create(req.body, function(err, createdIceCream) {
-		res.redirect('/icecreams');
+    User.findById(req.body.userId, function(err, foundUser) {
+        IceCream.create(req.body, function(err, createdIceCream) {
+            foundUser.icecreams.push(createdIceCream);
+            foundUser.save(function(err, data) {
+                res.redirect('/icecreams');
+            });
+        });
 	});
 });
 

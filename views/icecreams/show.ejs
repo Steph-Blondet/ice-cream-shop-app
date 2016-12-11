@@ -12,7 +12,7 @@
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="#">About</a></li>
-                    <li><a href="#">Ice Creams</a></li>
+                    <li><a href="/icecreams">Ice Creams</a></li>
                     <li><a href="#">Location</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
@@ -20,10 +20,16 @@
         </header>
 
         <main>
+
             <section>
                 <h1>Show Page for <%=icecream.nameOfCreation%></h1>
+                <p><a href="/icecreams">Back to Ice Creams</a></p>
+                <p>Flavor: <%=icecream.flavor%></p>
+                <p>Topping: <%=icecream.toppings%></p>
+                <p>Sauces: <%=icecream.sauces%></p>
                 <p><a href="/icecreams/<%=icecream._id%>/edit">Edit Ice Cream</a></p>
             </section>
+
 
             <section>
                 <form action="/icecreams/<%=icecream._id%>?_method=DELETE" method="POST">
