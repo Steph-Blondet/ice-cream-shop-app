@@ -26,7 +26,9 @@ router.get('/new', function(req, res) {
 // CREATE
 router.post('/', function(req, res) {
     User.create(req.body, function(err, createdUser) {
-        res.redirect('/users');
+        res.render('users/show.ejs', {
+            user: createdUser
+        });
     });
 });
 
@@ -41,23 +43,23 @@ router.get('/:id', function(req, res) {
 });
 
 
-// UPDATE
-router.put('/:id', function(req, res) {
-    User.findByIdAndUpdate(req.params.id, req.body, { new: true }, function(err, updatedUser) {
-        // console.log(updatedUser);
-        res.render('users/show.ejs', {
-            user: updatedUser
-        });
-    });
-});
-
-
 // EDIT
 router.get('/:id/edit', function(req, res) {
     User.findById(req.params.id, function(err, foundUser) {
         // console.log(foundUser);
         res.render('users/edit.ejs', {
             user: foundUser
+        });
+    });
+});
+
+
+// UPDATE
+router.put('/:id', function(req, res) {
+    User.findByIdAndUpdate(req.params.id, req.body, { new: true }, function(err, updatedUser) {
+        // console.log(updatedUser);
+        res.render('users/show.ejs', {
+            user: updatedUser
         });
     });
 });
