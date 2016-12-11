@@ -1,5 +1,6 @@
 // DEPENDENCIES
 var express = require('express');
+var session = require('express-session');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var mongoose = require('mongoose');
@@ -13,11 +14,14 @@ app.use(bodyParser.json());
 
 
 // CONTROLLERS
+var userController = require('./controllers/userController.js');
+app.use('/users', userController);
+
 var iceCreamController = require('./controllers/iceCreamController.js')
 app.use('/icecreams', iceCreamController);
 
-var userController = require('./controllers/userController.js');
-app.use('/users', userController);
+var sessionsController = require('./controllers/sessionsController.js');
+app.use('/sessions', sessionsController);
 
 
 // ROOT ROUTE

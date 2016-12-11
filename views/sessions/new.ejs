@@ -2,11 +2,11 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>EScream</title>
+        <title>Login</title>
     </head>
     <body>
         <header>
-            <h1>EScream Shop</h1>
+
             <h2><a href="/sessions/new">Log In</a></h2>
             <h2><a href="/users/new">Register</a></h2>
 
@@ -23,7 +23,12 @@
 
         <main>
             <section>
-                <img src="https://cdn.pixabay.com/photo/2016/08/26/12/59/ice-1622109_1280.jpg" width="500px" alt="">
+                <h1>Log In</h1>
+                <form action="/sessions" method="POST">
+                    <input type="text" name="username" placeholder="username"/><br/>
+                    <input type="password" name="password"/><br/>
+                    <input type="submit" value="Log In"/>
+                </form>
             </section>
         </main>
 
