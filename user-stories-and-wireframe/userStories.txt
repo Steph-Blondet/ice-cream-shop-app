@@ -1,0 +1,21 @@
+USER STORIES
+
+1. When the user goes to the website (index), the user will see the welcome page and the option to log in or register.
+
+2. When the user clicks to register, they will see a page to create a new user.
+
+3. Once the user is created, they will be redirect it to their personal profile.
+
+4. In their profile page, the user will have the option to edit/update and delete their profile and they will have the option to create new ice cream creations and see those creations.
+
+5. When the user clicks on one of their creations, they will see the show page of that specific creation.
+
+6. In the show page of the ice cream they will have the option to edit/update and delete that creation.
+
+7. The flavor, toppings and sauces of the ice cream will be in the database and will be shown as dropdown menus.
+
+8. When a user visits the ‘ice creams’ tab located in the nav bar, they will see a page that shows all the types of ice creams the shop is offering and the creations from other users.
+
+9. If a user clicks on a specific creation, they will be able to see the creation and who created it. (It would be great to have the option to rate that creation).
+
+10. If a user that is already registered visits the page, they will be able to log in instead of registering again. They will be able to do the same things that a new user can do.
