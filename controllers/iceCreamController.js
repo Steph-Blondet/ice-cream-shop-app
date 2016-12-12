@@ -37,6 +37,7 @@ router.post('/', function(req, res) {
             foundUser.icecreams.push(createdIceCream);
             foundUser.save(function(err, data) {
                 res.render('icecreams/show.ejs', {
+                    user: foundUser,
                     icecream: createdIceCream
                 });
             });

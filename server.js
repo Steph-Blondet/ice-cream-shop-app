@@ -39,7 +39,7 @@ function userLoggedIn(req, res, next) {
         return next();
     } else {
         req.session.badAttempt = true;
-        res.redirect('/sessions');
+        res.render('icecreams/new.ejs');
     }
 }
 
