@@ -7,6 +7,9 @@ var mongoose = require('mongoose');
 var bcrypt = require('bcrypt');
 var app = express();
 
+var port = process.env.PORT || 3000;
+var mongoDBURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/icecream';
+
 
 // CONTROLLERS
 var userController = require('./controllers/userController.js');
@@ -48,7 +51,7 @@ app.get('/', function(req, res){
 
 
 // DATABASE
-mongoose.connect('mongodb://localhost:27017/icecream');
+mongoose.connect(mongoDBURI);
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error: '));
@@ -58,6 +61,6 @@ db.once('open', function() {
 
 
 // LISTENER
-app.listen(3000, function() {
-    console.log("I'm listening :) ");
+app.listen(port, function() {
+    console.log("I'm listening on port " + port);
 });
