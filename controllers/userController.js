@@ -6,6 +6,7 @@ var User = require('../models/user.js');
 var IceCream = require('../models/icecream.js');
 
 
+
 //////// ROUTES
 // INDEX
 router.get('/', function(req, res) {
