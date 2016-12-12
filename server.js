@@ -8,32 +8,41 @@ var bcrypt = require('bcrypt');
 var app = express();
 
 
-// MIDDLEWARE
-app.use(methodOverride('_method'));
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+// CONTROLLERS
+var userController = require('./controllers/userController.js');
+var iceCreamController = require('./controllers/iceCreamController.js')
+var sessionsController = require('./controllers/sessionsController.js');
 
+
+// MIDDLEWARE
 app.use(session ({
     secret: "this is secret",
     resave: false,
     saveUninitialized: false
 }));
 
+app.use(methodOverride('_method'));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
-// CONTROLLERS
-var userController = require('./controllers/userController.js');
 app.use('/users', userController);
-
-var iceCreamController = require('./controllers/iceCreamController.js')
 app.use('/icecreams', iceCreamController);
+app.use('/sessions', userLoggedIn, sessionsController);
 
-var sessionsController = require('./controllers/sessionsController.js');
-app.use('/sessions', sessionsController);
+
+// CUSTOM MIDDLEWARE
+function userLoggedIn(req, res, next) {
+    if (req.session.loggedInUser) {
+        return next();
+    } else {
+        req.session.badAttempt = true;
+        res.redirect('/sessions');
+    }
+}
 
 
 // ROOT ROUTE
 app.get('/', function(req, res){
-    // res.send('hello!');
     res.render('index.ejs');
 });
 

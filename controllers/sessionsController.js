@@ -16,7 +16,7 @@ router.get('/new', function(req, res) {
 // CREATE
 router.post('/', function(req, res) {
     User.findOne({ username: req.body.username }, function(err, foundUser) {
-        if (req.body.password == foundUser.password) {
+        if (foundUser.authenticate(req.body.password)) {
             req.session.currentuser = foundUser;
             res.render('users/show.ejs', {
                 user: foundUser
