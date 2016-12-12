@@ -36,11 +36,13 @@ router.post('/', function(req, res) {
         IceCream.create(req.body, function(err, createdIceCream) {
             foundUser.icecreams.push(createdIceCream);
             foundUser.save(function(err, data) {
-                res.redirect('/icecreams');
+                res.render('icecreams/show.ejs', {
+                    icecream: createdIceCream
+                });
             });
         });
 	});
-});
+}); // ?
 
 
 // SHOW

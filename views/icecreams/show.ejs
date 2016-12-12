@@ -23,13 +23,13 @@
         <main>
 
             <section>
-                <h1><%=icecream.nameOfCreation%> Creation</h1>
+                <h1>Name of Creation: <%=icecream.nameOfCreation%></h1>
                 <p><a href="/icecreams">Back to Ice Creams</a></p>
 
                 <p>Flavor: <%=icecream.flavor%></p>
                 <p>Topping: <%=icecream.toppings%></p>
                 <p>Sauces: <%=icecream.sauces%></p>
-                <p>Creator: <a href="/users/<%=user._id%>"><%=user.username%></a></p>
+
                 <p><a href="/icecreams/<%=icecream._id%>/edit">Edit Ice Cream</a></p>
             </section>
 
