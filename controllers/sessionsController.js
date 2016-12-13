@@ -85,15 +85,6 @@ module.exports = router;
 //     });
 // });
 
-
-
-// +router.delete('/', function(req, res) {
-//  +    req.session.destroy(function(err) {
-//  +        res.redirect('/');
-//  +    });
-//  +});
-
-
 // // CREATE ROUTE
 // // LOGIN: When clicking 'login' in the '/sessions/new'
 // router.post('/', function(req, res) {
@@ -104,6 +95,22 @@ module.exports = router;
 //             res.render('users/show.ejs', {
 //                 user: foundUser
 //             })
+//         } else {
+//             res.send('wrong password');
+//         }
+//     });
+// });
+
+
+// // CREATE ROUTE
+// // LOGIN: When clicking 'login' in the '/sessions/new'
+// router.post('/', function(req, res) {
+//     User.findOne({ username: req.body.username }, function(err, foundUser) {
+//         if (req.body.password == foundUser.password) {
+//             req.session.currentuser = foundUser;
+//                 res.render('users/show.ejs', {
+//                     user: foundUser
+//                 });
 //         } else {
 //             res.send('wrong password');
 //         }

@@ -10,4 +10,5 @@ var iceCreamSchema = mongoose.Schema({
 
 var IceCream = mongoose.model('IceCream', iceCreamSchema);
 
+// EXPORTING THE MODEL
 module.exports = IceCream;

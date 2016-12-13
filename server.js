@@ -7,6 +7,8 @@ var mongoose = require('mongoose');
 var bcrypt = require('bcrypt');
 var app = express();
 
+
+// PORT
 var port = process.env.PORT || 3000;
 var mongoDBURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/icecream';
 
@@ -62,5 +64,5 @@ db.once('open', function() {
 
 // LISTENER
 app.listen(port, function() {
-    console.log("I'm listening on port " + port);
+    console.log("I'm listening on port: " + port);
 });

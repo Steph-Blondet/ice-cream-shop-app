@@ -8,6 +8,8 @@ var userSchema = mongoose.Schema({
     icecreams: [IceCream.schema]
 });
 
+
+// PASSWORD AUTHENTICATION
 userSchema.pre('save', function(next) {
   if (!this.isModified('password')) { return next(); }
   var hashedPassword = bcrypt.hashSync(this.password, bcrypt.genSaltSync(10));
@@ -17,9 +19,11 @@ userSchema.pre('save', function(next) {
 
 userSchema.methods.authenticate = function(password) {
   return bcrypt.compareSync(password, this.password);
-}
+} //--> needs more work
+//-------------------------------------------------------------
 
 
 var User = mongoose.model('User', userSchema);
 
+// EXPORTING THE MODEL
 module.exports = User;
