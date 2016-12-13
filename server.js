@@ -40,7 +40,7 @@ app.use('/sessions', sessionsController);
 //     } else {
 //         req.session.badAttempt = true;
 //         res.render('icecreams/new.ejs');
-//     } userLoggedIn,
+//     } // userLoggedIn,
 // }
 
 
