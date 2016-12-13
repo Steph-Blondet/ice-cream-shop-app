@@ -3,6 +3,9 @@
     <head>
         <meta charset="utf-8">
         <title>Login</title>
+        <!-- add css stylesheet link -->
+
+        <!-- add google fonts link -->
     </head>
     <body>
         <header>
@@ -10,6 +13,7 @@
             <h2><a href="/sessions/new">Log In</a></h2>
             <h2><a href="/users/new">Register</a></h2>
 
+            <!-- including ejs template for navbar -->
             <%- include ../partials/navbar.ejs %>
         </header>
 
@@ -24,7 +28,10 @@
             </section>
         </main>
 
-        <footer>©2016 Design and Development by Stephanie Blondet</footer>
+        <footer>
+            <!-- including ejs template for footer -->
+            <%- include partials/footer.ejs %>
+        </footer>
 
 
     </body>

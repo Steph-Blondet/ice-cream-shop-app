@@ -3,17 +3,31 @@
     <head>
         <meta charset="utf-8">
         <title>Register</title>
+        <!-- add css stylesheet link -->
+
+        <!-- add google fonts link -->
+
     </head>
     <body>
-        <%- include ../partials/navbar.ejs %>
-        
-        <h1>Register</h1>
+        <header>
+            <!-- including ejs template for navbar -->
+            <%- include ../partials/navbar.ejs %>
+        </header>
 
-        <form action="/users" method="POST">
-            <input type="text" name="username" value="Username"/><br/>
-            <input type="password" name="password" /><br/>
-            <input type="submit" value="Create User"/>
-        </form>
+        <main>
+            <h1>Register</h1>
+
+            <form action="/users" method="POST">
+                <input type="text" name="username" value="Username"/><br/>
+                <input type="password" name="password" /><br/>
+                <input type="submit" value="Create User"/>
+            </form>
+        </main>
+
+        <footer>
+            <!-- including ejs template for footer -->
+            <%- include partials/footer.ejs %>
+        </footer>
 
     </body>
 </html>

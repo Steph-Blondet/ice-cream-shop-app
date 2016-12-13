@@ -3,55 +3,71 @@
     <head>
         <meta charset="utf-8">
         <title>Ice Cream Creation</title>
+        <!-- add css stylesheet link -->
+
+        <!-- add google fonts link -->
+
     </head>
     <body>
-        <h1>Create Your Own Ice Cream</h1>
+        <header>
+            <!-- including ejs template for navbar -->
+            <%- include partials/navbar.ejs %>
+        </header>
 
-        <form action="/icecreams/" method="POST">
+        <main>
+            <h1>Create Your Own Ice Cream</h1>
 
-            <h3>Find your username</h3>
-                <select name="userId">
-                    <% for(var i=0; i <users.length; i++){ %>
-                        <option value="<%=users[i]._id%>"><%=users[i].username%></option>
-                    <% } %>
-                </select>
+            <form action="/icecreams/" method="POST">
 
-            <h3>Name of Creation</h3>
-                <input type="text" name="nameOfCreation" value="Name of Creation"/><br/>
+                <h3>Find your username</h3>
+                    <select name="userId">
+                        <% for(var i=0; i <users.length; i++){ %>
+                            <option value="<%=users[i]._id%>"><%=users[i].username%></option>
+                        <% } %>
+                    </select>
 
-            <h3>Choose your flavor</h3>
-                <select name="flavor">
-                    <option value="none"></option>
-                    <option value="Vanilla">Vanilla</option>
-                    <option value="Chocolate">Chocolate</option>
-                    <option value="Strawberry">Strawberry</option>
-                    <option value="Cookies and Cream">Cookies and Cream</option>
-                    <option value="Salted Caramel">Salted Caramel</option>
-                    <option value="Chocolate Chip">Chocolate Chip</option>
-                </select>
+                <h3>Name of Creation</h3>
+                    <input type="text" name="nameOfCreation" value="Name of Creation"/><br/>
 
-            <h3>Choose your toppings</h3>
-                <select name="toppings">
-                    <option value="none"></option>
-                    <option value="Cookie Dough">Cookie Dough</option>
-                    <option value="Oreo Cookies">Oreo Cookies</option>
-                    <option value="Chocolate Chips">Chocolate Chips</option>
-                    <option value="Sprinkles">Sprinkles</option>
-                    <option value="Gummy Bears">Gummy Bears</option>
-                    <option value="Brownie">Brownie</option>
-                </select>
+                <h3>Choose your flavor</h3>
+                    <select name="flavor">
+                        <option value="none"></option>
+                        <option value="Vanilla">Vanilla</option>
+                        <option value="Chocolate">Chocolate</option>
+                        <option value="Strawberry">Strawberry</option>
+                        <option value="Cookies and Cream">Cookies and Cream</option>
+                        <option value="Salted Caramel">Salted Caramel</option>
+                        <option value="Chocolate Chip">Chocolate Chip</option>
+                    </select>
 
-            <h3>Choose your sauces</h3>
-                <select name="sauces">
-                    <option value="none"></option>
-                    <option value="Hot Fudge">Hot Fudge</option>
-                    <option value="Caramel Sauce">Caramel Sauce</option>
-                    <option value="Strawberry Sauce">Strawberry Sauce</option>
-                    <option value="Whipped Cream">Whipped Cream</option>
-                </select><br/>
+                <h3>Choose your toppings</h3>
+                    <select name="toppings">
+                        <option value="none"></option>
+                        <option value="Cookie Dough">Cookie Dough</option>
+                        <option value="Oreo Cookies">Oreo Cookies</option>
+                        <option value="Chocolate Chips">Chocolate Chips</option>
+                        <option value="Sprinkles">Sprinkles</option>
+                        <option value="Gummy Bears">Gummy Bears</option>
+                        <option value="Brownie">Brownie</option>
+                    </select>
 
-            <input type="submit" value="Create Ice Cream"/>
-        </form>
+                <h3>Choose your sauces</h3>
+                    <select name="sauces">
+                        <option value="none"></option>
+                        <option value="Hot Fudge">Hot Fudge</option>
+                        <option value="Caramel Sauce">Caramel Sauce</option>
+                        <option value="Strawberry Sauce">Strawberry Sauce</option>
+                        <option value="Whipped Cream">Whipped Cream</option>
+                    </select><br/>
 
+                <input type="submit" value="Create Ice Cream"/>
+            </form>
+        </main>
+
+        <footer>
+            <!-- including ejs template for footer -->
+            <%- include partials/footer.ejs %>
+        </footer>
+        
     </body>
 </html>
