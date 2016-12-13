@@ -30,18 +30,18 @@ app.use(bodyParser.json());
 
 app.use('/users', userController);
 app.use('/icecreams', iceCreamController);
-app.use('/sessions', userLoggedIn, sessionsController);
+app.use('/sessions', sessionsController);
 
 
 // CUSTOM MIDDLEWARE
-function userLoggedIn(req, res, next) {
-    if (req.session.loggedInUser) {
-        return next();
-    } else {
-        req.session.badAttempt = true;
-        res.render('icecreams/new.ejs');
-    }
-}
+// function userLoggedIn(req, res, next) {
+//     if (req.session.loggedInUser) {
+//         return next();
+//     } else {
+//         req.session.badAttempt = true;
+//         res.render('icecreams/new.ejs');
+//     } userLoggedIn,
+// }
 
 
 // ROOT ROUTE

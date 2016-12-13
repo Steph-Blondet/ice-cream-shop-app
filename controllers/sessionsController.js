@@ -8,9 +8,10 @@ var User = require('../models/user.js');
 //////// ROUTES
 
 // NEW
+// /sessions/new
 router.get('/new', function(req, res) {
     res.render('sessions/new.ejs');
-}); // --> problem
+}); // --> bug
 
 
 // CREATE
@@ -20,7 +21,7 @@ router.post('/', function(req, res) {
             req.session.currentuser = foundUser;
             res.render('users/show.ejs', {
                 user: foundUser
-            })
+            });
         } else {
             res.send('wrong password');
         }
@@ -32,7 +33,7 @@ router.post('/', function(req, res) {
 router.delete('/', function(req, res) {
     req.session.destroy(function(err) {
         res.redirect('/');
-    }); // --> problem
+    }); // --> bug
 });
 
 
