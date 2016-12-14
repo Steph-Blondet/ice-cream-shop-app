@@ -1,12 +1,12 @@
 STYLE (CSS) PLAN:
 
-1. Design the homepage (main index.esjs)
+1. Design the homepage (main index.esjs) [X]
     - design custom logo in iPad Pro and Adobe Illustrator
     - add background image
     - style the navbar
     - style the footer
 
-2. Design the ice cream index.ejs (all ice creams displaying)
+2. Design the ice cream index.ejs (all ice creams displaying) [X]
 3. Design the ice cream new page (form)
 4. Design the ice cream show page (images)
 5. Design the ice cream edit page (form)

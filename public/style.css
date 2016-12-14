@@ -529,13 +529,14 @@ main:after {
 
 .icecream-creations {
     margin: 1em;
-    padding: 1em;
+    padding: 2em 0;
     font-size: 1.3em;
 }
 
 .icecream-creations li a {
     text-decoration: none;
     color: #4B7BD7;
+    margin: 1em;
 }
 
 .icecream-creations li a:hover {
