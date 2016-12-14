@@ -88,18 +88,16 @@ main {
 .berry-icecream {
     text-align: center;
     width: 250px;
-    position: absolute;
-    z-index: 1;
+    /*position: absolute;*/
+    z-index: -1;
     margin: 0 auto;
     padding: 1em;
 }
 
-.escream-logo img {
+.escream-logo {
     text-align: center;
-    margin-top: 25%;
-    position: absolute;
-    z-index: 1;
-    padding: 3%;
+    position: relative;
+    z-index: 2;
 }
 
 /** About **/
@@ -186,7 +184,7 @@ footer {
     color: white;
     font-size: 0.8em;
     text-align: center;
-    padding: 0.8em 1.5em;
+    padding: 1.5em;
     display: block;
     height: 2.7em;
 }
