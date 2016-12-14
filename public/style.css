@@ -510,15 +510,6 @@ main:after {
 
 
 .add-button a {
-    background-color: #98F5D5;
-    color: #D7769B;
-    border: none;
-    border-radius: 0.3em;
-    text-decoration: none;
-    padding: 0.5em 1.5em;
-}
-
-.add-button a:hover {
     background-color: #D7769B;
     color: white;
     border: none;
@@ -527,8 +518,58 @@ main:after {
     padding: 0.5em 1.5em;
 }
 
-.icecream-creations a {
+.add-button a:hover {
+    background-color: #4B7BD7;
+    color: #D7769B;
+    border: none;
+    border-radius: 0.3em;
     text-decoration: none;
-    margin: 0 auto;
+    padding: 0.5em 1.5em;
+}
+
+.icecream-creations {
+    margin: 1em;
+    padding: 1em;
+    font-size: 1.3em;
+}
+
+.icecream-creations li a {
+    text-decoration: none;
+    color: #4B7BD7;
+}
+
+.icecream-creations li a:hover {
+    text-decoration: none;
+    color: #D7769B;
+}
+
+.icecream-creations li  {
+    list-style-type: none;
     text-align: center;
+}
+
+@media (min-width: 650px) {
+    .add-button a, .add-button a:hover {
+        padding: 1em 2em;
+        font-size: 1.2em;
+    }
+
+    .icecream-creations {
+        margin: 1.2em;
+        padding: 1.2em;
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 900px) {
+    .add-button a, .add-button a:hover {
+        padding: 1.2em 2.2em;
+        font-size: 1.2em;
+    }
+
+    .icecream-creations {
+        margin: 1.2em;
+        padding: 1.2em;
+        font-size: 1.7em;
+    }
 }
