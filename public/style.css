@@ -102,6 +102,12 @@ main {
     }
 }
 
+@media (min-width: 900px) {
+    .full-navbar {
+        font-size: 1em;
+    }
+}
+
 
 /****** MAIN SECTION ******/
 
@@ -146,6 +152,21 @@ main {
 
     .escream-logo img {
         width: 320px;
+    }
+}
+
+
+@media (min-width: 900px) {
+    .escream-front {
+        height: 620px;
+    }
+
+    .berry-icecream img {
+        width: 230px;
+    }
+
+    .escream-logo img {
+        width: 450px;
     }
 }
 
@@ -224,6 +245,47 @@ h1 {
 }
 
 
+@media (min-width: 900px) {
+    .about {
+        height: 770px;
+        font-size: 1.2em;
+        padding: 1.5em;
+    }
+
+    h1 {
+        letter-spacing: 0.05em;
+        font-size: 4em;
+    }
+
+    .img-container {
+        width: 900px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .emilio-about, .steph-about {
+        padding: 1.2em;
+        margin: 0;
+        width: 400px;
+    }
+
+    .emilio-about img, .steph-about img {
+        width: 320px;
+    }
+
+    .emilio-about, .steph-about {
+        padding: 1.2em;
+        /*float: left;*/
+        width: 370px;
+    }
+
+    .name-about {
+        padding: 0.5em;
+        font-size: 1.2em;
+    }
+}
+
+
 /** Icecreams **/
 .icecreams {
     background-color: #FFDC66;
@@ -282,9 +344,25 @@ h1 {
         margin: 0 auto;
         font-size: 1em;
     }
+}
 
-    .flavors-p a:hover {
-        color: #4B7BD7;
+
+@media (min-width: 900px) {
+    .icecreams {
+        padding: 0.8em;
+        height: 950px;
+    }
+
+    .icecreams-img-container {
+        width: 800px;
+    }
+
+    .vanilla-icecreams img, .chocolate-icecreams img, .redvelvet-icecreams img, .pistaschio-icecreams img {
+        width: 370px;
+    }
+
+    .flavors-p a {
+        font-size: 1.5em;
     }
 }
 
@@ -313,6 +391,18 @@ h1 {
     .square-placeholder {
         width: 400px;
         height: 400px;
+    }
+}
+
+@media (min-width: 650px) {
+    .location {
+        height: 740px;
+        font-size: 1.2em;
+    }
+
+    .square-placeholder {
+        width: 700px;
+        height: 450px;
         margin: 1em auto;
         text-align: left;
     }
