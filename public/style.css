@@ -17,7 +17,7 @@ main {
 .full-navbar {
     background-color: black;
     text-align: center;
-    font-size: 0.8em;
+    font-size: 0.7em;
     padding: 0.5em;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -73,6 +73,34 @@ main {
     padding: 0.3em 2.21em;
 }
 
+@media (min-width: 650px) {
+    .full-navbar {
+        font-size: 0.7em;
+        height: 2.5em;
+        padding: 2em 0.8em 0.8em 2em;
+    }
+
+    .half-navbar-left {
+        float: left;
+    }
+
+    nav ul li {
+        display: inline-block;
+    }
+
+    .half-navbar-right {
+        float: right;
+    }
+
+    .half-navbar-right p a {
+        margin: 0.3em;
+    }
+
+    .login-button, .register-button {
+        margin: 0.1em;
+        display: inline;
+    }
+}
 
 
 /****** MAIN SECTION ******/
@@ -83,22 +111,44 @@ main {
     height: 300px;
     margin: auto;
     padding: 0.9em;
+
 }
 
 .berry-icecream {
     text-align: center;
-    width: 250px;
-    /*position: absolute;*/
-    z-index: -1;
+    display: block;
     margin: 0 auto;
     padding: 1em;
 }
 
+.berry-icecream img {
+    width: 100px;
+}
+
 .escream-logo {
     text-align: center;
-    position: relative;
-    z-index: 2;
+    display: inline-block;
 }
+
+.escream-logo img {
+    width: 240px;
+}
+
+
+@media (min-width: 650px) {
+    .escream-front {
+        height: 420px;
+    }
+
+    .berry-icecream img {
+        width: 150px;
+    }
+
+    .escream-logo img {
+        width: 320px;
+    }
+}
+
 
 /** About **/
 .about {
@@ -107,6 +157,7 @@ main {
     color: white;
     font-size: 0.9em;
     padding: 1em;
+    margin: auto;
 }
 
 h1 {
@@ -116,14 +167,14 @@ h1 {
     text-align: center;
 }
 
-.emilio-about {
+.emilio-about, .steph-about {
     text-align: center;
     padding: 1em;
+    margin: 0 auto;
 }
 
-.steph-about {
-    text-align: center;
-    padding: 1em;
+.emilio-about img, .steph-about img {
+    width: 170px;
 }
 
 .name-about {
@@ -132,6 +183,41 @@ h1 {
     text-transform: uppercase;
     font-size: 1.2em;
     font-weight: 800;
+}
+
+
+@media (min-width: 650px) {
+    .about {
+        height: 890px;
+        font-size: 0.9em;
+        padding: 1em;
+    }
+
+    h1 {
+        letter-spacing: 0.05em;
+        font-size: 2em;
+    }
+
+    .emilio-about {
+        padding: 1em;
+    }
+
+    .emilio-about img {
+        width: 170px;
+    }
+
+    .steph-about {
+        padding: 1em;
+    }
+
+    .steph-about img {
+        width: 170px;
+    }
+
+    .name-about {
+        padding: 0.5em;
+        font-size: 1.2em;
+    }
 }
 
 /** Icecreams **/
@@ -161,6 +247,7 @@ h1 {
 .flavors-p a:hover {
     color: #4B7BD7;
 }
+
 
 /** Location **/
 .location {
