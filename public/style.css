@@ -315,7 +315,6 @@ h1 {
 
 .flavors-p {
     text-align: center;
-
 }
 
 .flavors-p a {
@@ -458,6 +457,8 @@ main:after {
 
 /****** ICECREAMS PAGES ******/
 
+/*** INDEX PAGE ***/
+
 /** Main **/
 .icecreams-index {
     background-color: #FFDC66;
@@ -570,7 +571,12 @@ main:after {
 
     .icecream-creations {
         margin: 1.2em;
-        padding: 1.2em;
+        padding: 1em;
         font-size: 1.7em;
     }
 }
+
+
+/*** NEW ICECREAM PAGE ***/
+
+/** Flavors **/

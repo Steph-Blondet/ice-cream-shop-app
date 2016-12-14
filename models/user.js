@@ -17,10 +17,10 @@ userSchema.pre('save', function(next) {
   next();
 });
 
-userSchema.methods.authenticate = function(password) {
-  return bcrypt.compareSync(password, this.password);
-} //--> needs more work
-//-------------------------------------------------------------
+// userSchema.methods.authenticate = function(password) {
+//   return bcrypt.compareSync(password, this.password);
+// } //--> needs more work
+// //-------------------------------------------------------------
 
 
 var User = mongoose.model('User', userSchema);

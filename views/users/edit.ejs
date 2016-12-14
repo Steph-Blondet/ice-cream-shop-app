@@ -3,15 +3,20 @@
     <head>
         <meta charset="utf-8">
         <title>Edit User Profile</title>
-        <!-- add css stylesheet link -->
-
-        <!-- add google fonts link -->
-
+        <!-- css stylesheet link -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <!-- google fonts link -->
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,800|Pacifico" rel="stylesheet">
+        <!-- viewport -->
+        <meta name="viewport" content="width=device-width,initial-scale=1">
     </head>
     <body>
         <header>
-            <!-- including ejs template for navbar -->
-            <%- include ../partials/navbar.ejs %>
+            <div class="full-navbar">
+                <div class="half-navbar-left">
+                    <%- include ../partials/navbar.ejs %>
+                </div>
+            </div>
         </header>
 
         <main>
