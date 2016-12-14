@@ -4,8 +4,8 @@ var router = express.Router();
 
 
 // MODELS
-var User = require('../models/user.js');
 var IceCream = require('../models/icecream.js');
+var User = require('../models/user.js');
 
 
 //////////////// ROUTES
@@ -14,12 +14,15 @@ var IceCream = require('../models/icecream.js');
 // ice creams's index page
 router.get('/', function(req, res) {
     IceCream.find({}, function(err, foundIceCreams) {
-        if(err) { console.log(err) }
-        res.render('icecreams/index.ejs', {
-            icecreams: foundIceCreams
-         });
-     });
-});
+        User.find({}, function(err, foundUsers) {
+            res.render('icecreams/index.ejs', {
+                icecreams: foundIceCreams,
+                users: foundUsers,
+                currentUser: req.session.currentuser
+            });
+        });
+    });
+}); //--> ok
 
 
 // NEW ROUTE = '/icecreams/new'
@@ -27,10 +30,11 @@ router.get('/', function(req, res) {
 router.get('/new', function(req, res) {
     User.find({}, function(err, allUsers) {
         res.render('icecreams/new.ejs', {
-            users: allUsers
+            users: allUsers,
+            currentUser: req.session.currentuser
         });
     });
-});
+}); //--> ok
 
 
 // CREATE ROUTE = triggered with the click of the button
@@ -40,28 +44,11 @@ router.post('/', function(req, res) {
         IceCream.create(req.body, function(err, createdIceCream) {
             foundUser.icecreams.push(createdIceCream);
             foundUser.save(function(err, data) {
-                res.render('icecreams/show.ejs', {
-                    user: foundUser,
-                    icecream: createdIceCream
-                });
+                res.redirect('/icecreams');
             });
         });
 	});
-});
-
-
-// SHOW ROUTE = '/icecreams/:id'
-// the show page of the ice cream that was clicked
-router.get('/:id', function(req, res) {
-    IceCream.findById(req.params.id, function(err, foundIceCream){
-        User.findOne({'icecreams._id':req.params.id}, function(err, foundUser){
-            res.render('icecreams/show.ejs', {
-                user: foundUser,
-                icecream: foundIceCream
-            });
-        });
-    });
-});
+}); //--> ok
 
 
 // UPDATE ROUTE = triggered with the click of the button
@@ -76,23 +63,26 @@ router.put('/:id', function(req, res) {
             });
         });
     });
-});
+}); //--> ok
 
 
 // EDIT ROUTE = '/icecreams/:id/edit'
 // when clicking the 'edit ice cream' link in the ice cream show page
  router.get('/:id/edit', function(req, res) {
     IceCream.findById(req.params.id, function(err, foundIceCream) {
-        res.render('icecreams/edit.ejs', {
-            icecream: foundIceCream
+        User.find({}, function(err, allUsers) {
+            res.render('icecreams/edit.ejs', {
+                icecream: foundIceCream,
+                users: allUsers
+            });
         });
     });
- });
+ }); //--> ok
 
 
 // DELETE ROUTE = triggered with the click of the button
 // when clicking the 'delete ice cream' button in the 'icecreams/:id' (ice cream show page)
- router.delete('/:id', function(req, res){
+ router.delete('/:id', function(req, res) {
      IceCream.findByIdAndRemove(req.params.id, function(err, foundIceCream) {
         User.findOne({'icecreams._id':req.params.id}, function(err, foundUser) {
             foundUser.icecreams.id(req.params.id).remove();
@@ -101,7 +91,23 @@ router.put('/:id', function(req, res) {
             });
         });
      });
- });
+ }); //--> ok
+
+
+ // SHOW ROUTE = '/icecreams/:id'
+ // the show page of the ice cream that was clicked
+ router.get('/:id', function(req, res) {
+     IceCream.findById(req.params.id, function(err, foundIceCream){
+         User.findOne({'icecreams._id':req.params.id}, function(err, foundUser){
+             res.render('icecreams/show.ejs', {
+                 user: foundUser,
+                 icecream: foundIceCream,
+                 currentUser: req.session.currentUser
+             });
+         });
+     });
+ }); //--> ok
+
 
 //////////////// END OF ROUTES
 
