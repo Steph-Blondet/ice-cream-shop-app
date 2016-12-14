@@ -80,28 +80,32 @@ main {
 /** Escream Front **/
 .escream-front {
     background-color: #98F5D5;
-    height: 350px;
-    margin: 0 auto;
+    height: 300px;
+    margin: auto;
     padding: 0.9em;
 }
 
 .berry-icecream {
-    margin: 0 0 0 30%;
+    text-align: center;
     width: 250px;
-    /*position: relative;*/
-    z-index: -1;
+    position: absolute;
+    z-index: 1;
+    margin: 0 auto;
+    padding: 1em;
 }
 
-.escream-logo {
-    margin: 0 0;
-    /*position: absolute;*/
-    z-index: 0;
+.escream-logo img {
+    text-align: center;
+    margin-top: 25%;
+    position: absolute;
+    z-index: 1;
+    padding: 3%;
 }
 
 /** About **/
 .about {
     background-color: #D7769B;
-    height: 880px;
+    height: 890px;
     color: white;
     font-size: 0.9em;
     padding: 1em;
@@ -121,7 +125,7 @@ h1 {
 
 .steph-about {
     text-align: center;
-
+    padding: 1em;
 }
 
 .name-about {
@@ -180,9 +184,9 @@ h1 {
 footer {
     background-color: black;
     color: white;
-    font-size: 0.9em;
+    font-size: 0.8em;
     text-align: center;
-    padding: 0.3em 0.6em;
+    padding: 0.8em 1.5em;
     display: block;
     height: 2.7em;
 }
