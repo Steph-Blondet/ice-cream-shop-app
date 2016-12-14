@@ -12,14 +12,7 @@ var app = express();
 var port = process.env.PORT || 3000;
 var mongoDBURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/icecream';
 
-// DATABASE
-mongoose.connect(mongoDBURI);
 
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error: '));
-db.once('open', function() {
-    console.log('connected to mongo');
-});
 
 
 // CONTROLLERS
@@ -35,15 +28,25 @@ app.use(session ({
     saveUninitialized: false
 }));
 
-
+app.use(express.static('public'));
 app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static('public'));
+
 
 app.use('/users', userController);
 app.use('/icecreams', iceCreamController);
 app.use('/sessions', sessionsController);
+
+
+// DATABASE
+mongoose.connect(mongoDBURI);
+
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error: '));
+db.once('open', function() {
+    console.log('connected to mongo');
+});
 
 
 // CUSTOM MIDDLEWARE

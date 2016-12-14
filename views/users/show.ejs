@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>User's Page</title>
         <!-- css stylesheet link -->
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="/style.css">
         <!-- google fonts link -->
         <link href="https://fonts.googleapis.com/css?family=Muli:400,800|Pacifico" rel="stylesheet">
         <!-- viewport -->
@@ -15,9 +15,16 @@
         <header>
             <div class="full-navbar">
                 <div class="half-navbar-left">
-                    <%- include ../partials/navbar.ejs %>
+                    <nav>
+                        <ul>
+                            <li class="nav-links"><a href="/">Home</a></li>
+                            <li class="nav-links"><a href="#about">About</a></li>
+                            <li class="nav-links"><a href="/icecreams">Ice Creams</a></li>
+                            <li class="nav-links"><a href="#">Location</a></li>
+                            <li class="nav-links"><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
                 </div>
-            </div>
         </header>
 
         <main>
@@ -50,10 +57,8 @@
             </section>
         </main>
 
-        <footer>
-            <!-- including ejs template for footer -->
-            <%- include ../partials/footer.ejs %>
-        </footer>
+        <!-- including ejs template for footer -->
+        <%- include ../partials/footer.ejs %>
 
     </body>
 </html>

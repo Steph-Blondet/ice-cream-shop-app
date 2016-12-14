@@ -39,17 +39,6 @@ router.post('/', function(req, res) {
 });
 
 
-// SHOW ROUTE = '/users/:id'
-// the show page of the user that was clicked
-router.get('/:id', function(req, res) {
-    User.findById(req.params.id, function(err, foundUser) {
-        res.render('users/show.ejs', {
-            user: foundUser
-        });
-    });
-});
-
-
 // EDIT ROUTE = '/users/:id/edit'
 // when clicking the 'edit user' link in the user show page
 router.get('/:id/edit', function(req, res) {
@@ -67,9 +56,7 @@ router.get('/:id/edit', function(req, res) {
 router.put('/:id', function(req, res) {
     User.findByIdAndUpdate(req.params.id, req.body, { new: true }, function(err, updatedUser) {
         // console.log(updatedUser);
-        res.render('users/show.ejs', {
-            user: updatedUser
-        });
+        res.redirect('/users/' + req.params.id);
     });
 });
 
@@ -79,6 +66,17 @@ router.put('/:id', function(req, res) {
 router.delete('/:id', function(req, res){
     User.findByIdAndRemove(req.params.id, function() {
         res.redirect('/users');
+    });
+});
+
+
+// SHOW ROUTE = '/users/:id'
+// the show page of the user that was clicked
+router.get('/:id', function(req, res) {
+    User.findById(req.params.id, function(err, foundUser) {
+        res.render('users/show.ejs', {
+            user: foundUser
+        });
     });
 });
 
