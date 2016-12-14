@@ -117,28 +117,28 @@ main {
 .escream-front {
     background-color: #98F5D5;
     height: 300px;
-    margin: auto;
+    /*margin: auto;*/
     padding: 0.9em;
-}
-
-.berry-icecream {
-    text-align: center;
-    display: block;
-    margin: 0 auto;
-    padding: 1em;
-}
-
-.berry-icecream img {
-    width: 100px;
-}
-
-.escream-logo {
-    text-align: center;
-    display: inline-block;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .escream-logo img {
+    /*text-align: center;*/
+    /*display: inline-block;*/
     width: 240px;
+    /*position: absolute;*/
+    z-index: 5;
+}
+
+.berry-icecream img {
+    /*text-align: center;*/
+    width: 100px;
+    position: absolute;
+    z-index: 0;
 }
 
 
@@ -315,6 +315,7 @@ h1 {
 
 .flavors-p {
     text-align: center;
+
 }
 
 .flavors-p a {
@@ -324,6 +325,7 @@ h1 {
     font-weight: 800;
     text-decoration: none;
     display: block;
+    overflow: auto;
 }
 
 .flavors-p a:hover {
@@ -356,10 +358,11 @@ h1 {
 
     .flavors-p a {
         font-size: 1em;
-        display: inline-block;
-        vertical-align: middle;
-        margin: 0 auto;
+        /*display: inline-block;*/
+        /*vertical-align: middle;*/
+        /*margin: 0 auto;*/
         font-size: 1em;
+        overflow: auto;
     }
 }
 
