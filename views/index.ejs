@@ -6,7 +6,7 @@
         <!-- css stylesheet link -->
         <link rel="stylesheet" type="text/css" href="style.css">
         <!-- google fonts link -->
-        <link href="https://fonts.googleapis.com/css?family=Muli:400,800" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,800|Pacifico" rel="stylesheet">
         <!-- viewport -->
         <meta name="viewport" content="width=device-width,initial-scale=1">
 
@@ -28,31 +28,64 @@
 
         <main>
 
-            <section id="escream-front">
+            <section class="escream-front">
                 <div class="berry-icecream">
                     <img src="../images/home/escream-homepage.png" width="100px" alt="">
                 </div>
 
                 <div class="escream-logo">
-                    <img src="../images/home/escream-white-logo.png" width="250px" alt="">
+                    <img src="../images/home/escream-white-logo.png" width="200px" alt="">
                 </div>
 
             </section>
 
-            <section id="about">
+            <section class="about">
+                <h1>About EScreams</h1>
+                <div class="emilio-about">
+                    <img src="../images/about/emilio-pic.png" width="170px" alt="">
+                    <p class="name-about">Emilio</p>
+                    <p>Cheesecake, butterscotch butter cherry coffee cake butterscotch, cheesecake, maple nut shortcake peanut butter. Maple nut coffee almond caramel blueberry pecan.</p>
+                    <br/>
+                    <p>Marshmellow apple orange orange peanut butter cookies and cream peppermint. Banana peanut butter butter, cherry apple pecan.</p>
+                </div>
+
+                <div class="steph-about">
+                    <img src="../images/about/stephanie-pic.png" width="170px" alt="">
+                    <p class="name-about">Stephanie</p>
+                    <p>Cheesecake, butterscotch butter cherry coffee cake butterscotch, cheesecake, maple nut shortcake peanut butter. Maple nut coffee almond caramel blueberry pecan.</p>
+                    <br/>
+                    <p>Marshmellow apple orange orange peanut butter cookies and cream peppermint. Banana peanut butter butter, cherry apple pecan.</p>
+                </div>
+            </section>
+
+            <section class="icecreams">
+                <h1>Ice Creams</h1>
+                <div class="vanilla-icecreams">
+                    <img src="../images/icecreams/vainilla.png" width="170px" alt="">
+                </div>
+
+                <div class="chocolate-icecreams">
+                    <img src="../images/icecreams/chocolate.png" width="170px" alt="">
+                </div>
+
+                <div class="redvelvet-icecreams">
+                    <img src="../images/icecreams/red-velvet.png" width="170px" alt="">
+                </div>
+
+                <p class="flavors-p"><a href="/icecreams">See all flavors</a></p>
 
             </section>
 
-            <section id="location">
-
+            <section class="location">
+                <h1>Location</h1>
+                <div class="square-placeholder"></div>
+                <p>Currently located at Icecream Avenue.</p><br/>
+                <p>For more information, please contact the Ice Cream Queen.</p><br/>
             </section>
 
         </main>
 
-        <footer>
-            <!-- including ejs template for footer -->
-            <%- include partials/footer.ejs %>
-        </footer>
+        <footer>© 2016 Design and Development by Stephanie Blondet</footer>
 
     </body>
 </html>

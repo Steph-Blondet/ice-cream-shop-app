@@ -8,7 +8,8 @@ body {
 }
 
 main {
-    height: 600px;
+    /*height: 600px;*/
+    margin-bottom: -2.7em;
 }
 
 
@@ -69,13 +70,127 @@ main {
 }
 
 .register-button a {
-    padding: 0.3em 2.35em;
+    padding: 0.3em 2.21em;
 }
 
 
 
+/****** MAIN SECTION ******/
 
+/** Escream Front **/
+.escream-front {
+    background-color: #98F5D5;
+    height: 350px;
+    margin: 0 auto;
+    padding: 0.9em;
+}
 
+.berry-icecream {
+    margin: 0 0 0 30%;
+    width: 250px;
+    /*position: relative;*/
+    z-index: -1;
+}
+
+.escream-logo {
+    margin: 0 0;
+    /*position: absolute;*/
+    z-index: 0;
+}
+
+/** About **/
+.about {
+    background-color: #D7769B;
+    height: 880px;
+    color: white;
+    font-size: 0.9em;
+    padding: 1em;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    letter-spacing: 0.05em;
+    font-size: 2em;
+    text-align: center;
+}
+
+.emilio-about {
+    text-align: center;
+    padding: 1em;
+}
+
+.steph-about {
+    text-align: center;
+
+}
+
+.name-about {
+    color: #98F5D5;
+    padding: 0.5em;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: 800;
+}
+
+/** Icecreams **/
+.icecreams {
+    background-color: #FFDC66;
+    padding: 0.8em;
+    height: 650px;
+}
+
+.vanilla-icecreams, .chocolate-icecreams, .redvelvet-icecreams {
+    text-align: center;
+    padding: 0.5em;
+}
+
+.flavors-p {
+    text-align: center;
+}
+
+.flavors-p a {
+    text-align: center;
+    color: #D7769B;
+    font-size: 0.9em;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.flavors-p a:hover {
+    color: #4B7BD7;
+}
+
+/** Location **/
+.location {
+    background-color: #4B7BD7;
+    padding: 1em;
+    color: white;
+    height: 500px;
+    text-align: center;
+}
+
+.square-placeholder {
+    background-color: #314382;
+    width: 250px;
+    height: 250px;
+    margin: 1em auto;
+}
+
+/****** FOOTER ******/
+footer {
+    background-color: black;
+    color: white;
+    font-size: 0.9em;
+    text-align: center;
+    padding: 0.3em 0.6em;
+    display: block;
+    height: 2.7em;
+}
+
+main:after {
+  content: "";
+  display: block;
+}
 
 
 
