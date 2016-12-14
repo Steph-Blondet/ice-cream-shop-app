@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 var User = require('./user.js');
 
 var iceCreamSchema = mongoose.Schema({
+    userId: String,
     nameOfCreation: String,
     flavor: String,
     toppings: String,

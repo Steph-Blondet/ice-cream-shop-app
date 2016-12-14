@@ -13,8 +13,6 @@ var port = process.env.PORT || 3000;
 var mongoDBURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/icecream';
 
 
-
-
 // CONTROLLERS
 var userController = require('./controllers/userController.js');
 var iceCreamController = require('./controllers/iceCreamController.js')
@@ -64,9 +62,6 @@ db.once('open', function() {
 app.get('/', function(req, res){
     res.render('index.ejs');
 });
-
-
-
 
 
 // LISTENER
