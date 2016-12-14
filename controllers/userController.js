@@ -16,7 +16,7 @@ router.get('/', function(req, res) {
     User.find({}, function(err, foundUsers) {
         res.render('users/index.ejs', {
             usersAll: foundUsers,
-            currectUser: req.session.currentuser
+            currentUser: req.session.currentuser
         });
     });
 });  //--> ok
@@ -32,7 +32,7 @@ router.get('/new', function(req, res) {
 // CREATE ROUTE = triggered with the click of the button
 // When clicking 'create user' in the '/users/new', it goes to the login page '/sessions/new' so the user can login
 router.post('/', function(req, res) {
-    User.create(req.body, function(err, newUser) {
+    User.create(req.body, function(err, users) {
         res.redirect('/sessions/new');
     });
 }); //--> ok
@@ -45,7 +45,7 @@ router.get('/:id/edit', function(req, res) {
         // console.log(foundUser);
         res.render('users/edit.ejs', {
             user: foundUser,
-            currectUser: req.session.currentuser
+            currentUser: req.session.currentuser
         });
     });
 }); //--> ok

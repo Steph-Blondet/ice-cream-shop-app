@@ -25,11 +25,12 @@
             <form action="/icecreams/" method="POST">
 
                 <h3>Find your username</h3>
-                    <select name="userId">
-                        <% for(var i=0; i <users.length; i++){ %>
-                            <option value="<%=users[i]._id%>"><%=users[i].username%></option>
-                        <% } %>
-                    </select>
+
+                <select name="userId">
+                    <% for(var i=0; i <usersAll.length; i++){ %>
+                        <option value="<%=usersAll[i]._id%>"><%=usersAll[i].username%></option>
+                    <% } %>
+                </select>
 
                 <h3>Name of Creation</h3>
                     <input type="text" name="nameOfCreation" value="Name of Creation"/><br/>

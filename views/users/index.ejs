@@ -21,7 +21,11 @@
 
         <main>
             <h1>Welcome!</h1>
-            <p>Click to <a href="/sessions/new">Log In</a> or <a href="/users/new">Register</a></p>
+
+            <% if (!currentUser) { %>
+                <p class="login-button">Click to <a href="/sessions/new">Log In</a> or to
+                <a class="register-button" href="/users/new">Register</a></p>
+            <% } %>
 
         </main>
 

@@ -1,5 +1,4 @@
 var mongoose = require('mongoose');
-var User = require('./user.js');
 
 var iceCreamSchema = mongoose.Schema({
     userId: String,
@@ -11,5 +10,6 @@ var iceCreamSchema = mongoose.Schema({
 
 var IceCream = mongoose.model('IceCream', iceCreamSchema);
 
+    
 // EXPORTING THE MODEL
 module.exports = IceCream;

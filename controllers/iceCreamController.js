@@ -30,7 +30,7 @@ router.get('/', function(req, res) {
 router.get('/new', function(req, res) {
     User.find({}, function(err, allUsers) {
         res.render('icecreams/new.ejs', {
-            users: allUsers,
+            usersAll: allUsers,
             currentUser: req.session.currentuser
         });
     });
@@ -73,7 +73,7 @@ router.put('/:id', function(req, res) {
         User.find({}, function(err, allUsers) {
             res.render('icecreams/edit.ejs', {
                 icecream: foundIceCream,
-                users: allUsers
+                usersAll: allUsers
             });
         });
     });
