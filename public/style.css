@@ -188,30 +188,27 @@ h1 {
 
 @media (min-width: 650px) {
     .about {
-        height: 890px;
-        font-size: 0.9em;
+        height: 670px;
+        font-size: 1em;
         padding: 1em;
+        margin: 0 auto;
     }
 
     h1 {
         letter-spacing: 0.05em;
-        font-size: 2em;
+        font-size: 3.5em;
     }
 
-    .emilio-about {
-        padding: 1em;
+    .emilio-about, .steph-about {
+        padding: 1.2em;
+        margin: 0;
+        float: left;
+        width: 280px;
     }
 
-    .emilio-about img {
-        width: 170px;
-    }
+    .emilio-about img, .steph-about img {
+        width: 280px;
 
-    .steph-about {
-        padding: 1em;
-    }
-
-    .steph-about img {
-        width: 170px;
     }
 
     .name-about {
