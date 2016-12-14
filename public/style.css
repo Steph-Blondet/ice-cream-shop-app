@@ -73,6 +73,7 @@ main {
     padding: 0.3em 2.21em;
 }
 
+
 @media (min-width: 650px) {
     .full-navbar {
         font-size: 0.7em;
@@ -102,6 +103,7 @@ main {
     }
 }
 
+
 @media (min-width: 900px) {
     .full-navbar {
         font-size: 1em;
@@ -117,7 +119,6 @@ main {
     height: 300px;
     margin: auto;
     padding: 0.9em;
-
 }
 
 .berry-icecream {
@@ -174,7 +175,7 @@ main {
 /** About **/
 .about {
     background-color: #D7769B;
-    height: 890px;
+    height: 930px;
     color: white;
     font-size: 0.9em;
     padding: 1em;
@@ -186,6 +187,11 @@ h1 {
     letter-spacing: 0.05em;
     font-size: 2em;
     text-align: center;
+}
+
+.position-title {
+    font-weight: 800;
+    font-size: 1.15em;
 }
 
 .emilio-about, .steph-about {
@@ -209,7 +215,7 @@ h1 {
 
 @media (min-width: 650px) {
     .about {
-        height: 670px;
+        height: 700px;
         font-size: 1em;
         padding: 1em;
         margin: 0 auto;
@@ -222,7 +228,7 @@ h1 {
     }
 
     .img-container {
-        width: 800px;
+        width: 700px;
         margin: 0 auto;
         text-align: center;
     }
@@ -247,7 +253,7 @@ h1 {
 
 @media (min-width: 900px) {
     .about {
-        height: 770px;
+        height: 800px;
         font-size: 1.2em;
         padding: 1.5em;
     }
@@ -275,7 +281,6 @@ h1 {
 
     .emilio-about, .steph-about {
         padding: 1.2em;
-        /*float: left;*/
         width: 370px;
     }
 
@@ -293,9 +298,19 @@ h1 {
     height: 850px;
 }
 
+.icecreams-img-container {
+    margin: 0 auto;
+    text-align: center;
+}
+
 .vanilla-icecreams, .chocolate-icecreams, .redvelvet-icecreams, .pistaschio-icecreams {
     text-align: center;
     padding: 0.5em;
+    margin: 0 auto;
+}
+
+.vanilla-icecreams img, .chocolate-icecreams img, .redvelvet-icecreams img, .pistaschio-icecreams img {
+    width: 170px;
 }
 
 .flavors-p {
@@ -308,6 +323,7 @@ h1 {
     font-size: 0.8em;
     font-weight: 800;
     text-decoration: none;
+    display: block;
 }
 
 .flavors-p a:hover {
@@ -325,7 +341,6 @@ h1 {
         width: 600px;
         margin: 0 auto;
         text-align: center;
-        padding-top: 1em;
     }
 
     .vanilla-icecreams, .chocolate-icecreams, .redvelvet-icecreams, .pistaschio-icecreams {
@@ -335,6 +350,8 @@ h1 {
 
     .vanilla-icecreams img, .chocolate-icecreams img, .redvelvet-icecreams img, .pistaschio-icecreams img {
         width: 280px;
+        text-align: center;
+        margin: 0 auto;
     }
 
     .flavors-p a {
@@ -363,6 +380,7 @@ h1 {
 
     .flavors-p a {
         font-size: 1.5em;
+        display: block;
     }
 }
 
@@ -431,4 +449,83 @@ main:after {
         padding: 1.2em 0 0 0;
         height: 2.5em;
     }
+}
+
+
+
+/****** ICECREAMS PAGES ******/
+
+/** Main **/
+.icecreams-index {
+    background-color: #FFDC66;
+}
+
+.main-tittle {
+    color: #D7769B;
+    padding: 0.7em;
+    line-height: 1.2em;
+}
+
+.sub-tittle {
+    color: #4B7BD7;
+    padding: 0.5em;
+}
+
+
+/** Flavors **/
+.strawberry-icecreams, .salted-caramel-icecreams {
+    text-align: center;
+    padding: 0.5em;
+}
+
+
+@media (min-width: 650px) {
+    .strawberry-icecreams, .salted-caramel-icecreams {
+        float: left;
+        padding: 0.5em;
+    }
+
+    .strawberry-icecreams img, .salted-caramel-icecreams img {
+        width: 280px;
+    }
+}
+
+@media (min-width: 900px) {
+    .strawberry-icecreams img, .salted-caramel-icecreams img {
+        width: 370px;
+    }
+}
+
+
+/** Creations **/
+.add-button {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    padding-top: 0.5em;
+}
+
+
+.add-button a {
+    background-color: #98F5D5;
+    color: #D7769B;
+    border: none;
+    border-radius: 0.3em;
+    text-decoration: none;
+    padding: 0.5em 1.5em;
+}
+
+.add-button a:hover {
+    background-color: #D7769B;
+    color: white;
+    border: none;
+    border-radius: 0.3em;
+    text-decoration: none;
+    padding: 0.5em 1.5em;
+}
+
+.icecream-creations a {
+    text-decoration: none;
+    margin: 0 auto;
+    text-align: center;
 }

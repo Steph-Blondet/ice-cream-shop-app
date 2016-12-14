@@ -3,41 +3,73 @@
     <head>
         <meta charset="utf-8">
         <title>Ice Creams</title>
+        <!-- css stylesheet link -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <!-- google fonts link -->
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,800|Pacifico" rel="stylesheet">
+        <!-- viewport -->
+        <meta name="viewport" content="width=device-width,initial-scale=1">
     </head>
-    <body>
+    <body class="icecreams-index">
 
         <header>
-            <h1>Ice Creams by EScream</h1>
-            <%- include ../partials/navbar.ejs %>
+            <div class="full-navbar">
+                <div class="half-navbar-left">
+                    <%- include ../partials/navbar.ejs %>
+                </div>
+            </div>
+
+            <h1 class="main-tittle">Ice Creams by EScream</h1>
         </header>
 
         <main>
             <section>
-                <h1>Flavors</h1>
-                <ul>
-                    <li>Vanilla</li>
-                    <li>Chocolate</li>
-                    <li>Strawberry</li>
-                    <li>Cookies and Cream</li>
-                    <li>Salted Caramel</li>
-                    <li>Chocolate Chip</li>
-                </ul>
+                <h1 class="sub-tittle">Flavors</h1>
+
+                <div class="icecreams-img-container">
+                    <div class="vanilla-icecreams">
+                        <img src="../images/icecreams/vainilla.png" width="170px" alt="">
+                    </div>
+
+                    <div class="chocolate-icecreams">
+                        <img src="../images/icecreams/chocolate.png" width="170px" alt="">
+                    </div>
+
+                    <div class="redvelvet-icecreams">
+                        <img src="../images/icecreams/red-velvet.png" width="170px" alt="">
+                    </div>
+
+                    <div class="pistaschio-icecreams">
+                        <img src="../images/icecreams/pistaschio.png" width="170px" alt="">
+                    </div>
+
+                    <div class="strawberry-icecreams">
+                        <img src="../images/icecreams/strawberry.png" width="170px" alt="">
+                    </div>
+
+                    <div class="salted-caramel-icecreams">
+                        <img src="../images/icecreams/salted-caramel.png" width="170px" alt="">
+                    </div>
+
+                </div>
             </section>
 
             <section>
-                <h1>Creations</h1>
-                <p><a href="../icecreams/new">Add Ice Cream</a></p>
-                    <ul>
-                        <% for(var i=0; i <icecreams.length; i++){ %>
-        				    <li><a href="/icecreams/<%=icecreams[i]._id%>"><%=icecreams[i].nameOfCreation%></a></li>
-        			    <% } %>
-                    </ul>
+                <h1 class="sub-tittle">Creations</h1>
+
+                <p class="add-button"><a href="../icecreams/new">Add Ice Cream</a></p>
+
+                <ul class="icecream-creations">
+                    <% for(var i=0; i <icecreams.length; i++){ %>
+        			    <li><a href="/icecreams/<%=icecreams[i]._id%>"><%=icecreams[i].nameOfCreation%></a></li>
+        		    <% } %>
+                </ul>
             </section>
 
 
         </main>
 
         <!-- including ejs template for footer -->
-        <%- include ../partials/footer.ejs %>
+        <!-- <%- include ../partials/footer.ejs %> -->
     </body>
 </html>
