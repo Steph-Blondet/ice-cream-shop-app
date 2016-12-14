@@ -1,7 +1,10 @@
 /****** BASE STYLES ******/
+* {
+    margin: 0;
+}
+
 body {
     font-family: 'Muli', sans-serif;
-    margin: 0;
 }
 
 main {
@@ -9,100 +12,77 @@ main {
 }
 
 
-
 /****** NAVBAR ******/
 .full-navbar {
     background-color: black;
-    width: 100%;
-    margin: 0;
-    display: inline-block;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 0.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.full-navbar ul {
+    padding: 0;
 }
 
 .full-navbar a {
-    color: white;
     text-decoration: none;
 }
 
-@media (min-width: 300px) {
+.nav-links {
+    padding: 0.2em;
+}
+
+.half-navbar-left a {
+    color: white;
+}
+
+.half-navbar-left a:hover {
+    color: #98F5D5;
+}
+
+.half-navbar-right {
+    padding: 0.2em;
+}
+
+.half-navbar-right p a {
+    background-color: white;
+    color: black;
+    margin: 2em;
+    border: none;
+    border-radius: 0.2em;
+}
+
+.half-navbar-right p a:hover {
+    background-color: #D7769B;
+    color: #98F5D5;
+}
+
+.login-button, .register-button {
+    padding: 0.5em;
+    margin: 0.2em;
+}
+
+.login-button a {
+    padding: 0.3em 3.1em;
+}
+
+.register-button a {
+    padding: 0.3em 2.35em;
+}
+
+
+
+
+
+
+
+
+
+
+/*@media (min-width: 700px) {
     .full-navbar {
-        text-align: center;
-        margin: 0 auto;
-        font-size: 0.8em;
+        font-size: 3em;
     }
-
-    .full-navbar ul {
-        padding: 0;
-    }
-
-    .full-navbar li {
-        padding: 0.2em;
-    }
-
-    nav ul li a:hover {
-        color: #98F5D5; /*aquagreen*/
-    }
-
-    .half-navbar-right p a {
-        background-color: white;
-        color: black;
-        padding: 0.2em 3em;
-        margin: 2em;
-        border: none;
-        border-radius: 0.5em;
-    }
-
-    .half-navbar-right p a:hover {
-        background-color: #D7769B;
-        color: #98F5D5;
-    }
-} /*--> end of smartphone media query */
-
-
-@media (min-width: 550px) {
-    .half-navbar-left {
-        float: left;
-        padding: 0.5em 1em;
-        font-size: 1em;
-    }
-
-    nav ul li {
-        display: inline-block;
-    }
-
-    .half-navbar-right {
-        padding: 0.5em 1em;
-        width: 40%;
-        text-align: right;
-        float: right;
-    }
-
-    .half-navbar-right p {
-        display: inline-block;
-    }
-
-    .half-navbar-right p a {
-        font-size: 0.9em;
-        margin: 0 .5em;
-        padding: 0.3em 3em;
-        border: none;
-        border-radius: 0.5em;
-    }
-
-} /*--> end of tablet media query */
-
-
-@media (min-width: 1000px) {
-    .half-navbar-left {
-        padding: 1.5em 3em;
-        font-size: 1em;
-    }
-
-    .half-navbar-right {
-        padding: 1.5em 3em;
-    }
-
-    .half-navbar-right p a {
-        padding: 0.5em 4em;
-    }
-
-} /*--> end of tablet media query
+}*/
