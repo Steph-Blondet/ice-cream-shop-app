@@ -348,7 +348,7 @@ h1 {
 
     .flavors-p {
         text-align: center;
-        width: 700px;
+        width: 500px;
         margin: 0 auto;
         display: block;
     }
@@ -362,7 +362,7 @@ h1 {
 @media (min-width: 900px) {
     .icecreams {
         /*padding: 0.8em;*/
-        height: 1200px;
+        height: 800px;
     }
 
     .icecreams-img-container {
@@ -386,7 +386,6 @@ h1 {
 
     .flavors-p a {
         font-size: 1.5em;
-        /*display: inline-block;*/
     }
 }
 
@@ -659,18 +658,39 @@ input {
     line-height: 1.2em;
 }
 
+.flavors-img-container {
+    margin: 0 auto;
+    text-align: center;
+}
+
 .sub-tittle {
     color: #4B7BD7;
     padding: 0.5em;
-    /*margin: 0 auto;*/
 }
 
+@media (min-width: 650px) {
+    .flavors-img-container {
+        width: 850px;
+    }
+}
 
+@media (min-width: 900px) {
+    .flavors-img-container {
+        width: 900px;
+    }
+}
 
 /** Flavors **/
-.strawberry-icecreams, .salted-caramel-icecreams {
+.strawberry-icecreams img, .salted-caramel-icecreams img {
+    width: 170px;
     text-align: center;
     padding: 0.5em;
+    margin: 0 auto;
+}
+
+.flavors-img-container {
+    margin: 0 auto;
+    text-align: center;
 }
 
 
@@ -679,28 +699,31 @@ input {
         width: 600px;
     }*/
 
-    .strawberry-icecreams, .salted-caramel-icecreams {
-        text-align: center;
+    .strawberry-icecreams img, .salted-caramel-icecreams img {
         float: left;
-        padding: 0.5em;
+        width: 290px;
+        /*text-align: center;*/
+        margin: 0 1em;
+        padding: 1em;
+        /*display: block;*/
     }
 
-    .strawberry-icecreams img, .salted-caramel-icecreams img {
-        width: 280px;
-    }
 }
 
 @media (min-width: 900px) {
-    .icecreams {
+    /*.icecreams {
         height: 780px;
-    }
-
-    /*.icecreams-img-container {
-        width: 650px;
     }*/
 
+    .flavors-img-container {
+        width: 900px;
+    }
+
     .vanilla-icecreams img, .chocolate-icecreams img, .redvelvet-icecreams img, .pistaschio-icecreams img, .strawberry-icecreams img, .salted-caramel-icecreams img {
-        width: 290px;
+        width: 320px;
+        float: left;
+        margin: 0 2em;
+        /*padding: 2em;*/
     }
 }
 
