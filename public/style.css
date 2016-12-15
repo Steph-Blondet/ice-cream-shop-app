@@ -473,7 +473,9 @@ main:after {
 .sub-tittle {
     color: #4B7BD7;
     padding: 0.5em;
+    /*margin: 0 auto;*/
 }
+
 
 
 /** Flavors **/
@@ -484,7 +486,12 @@ main:after {
 
 
 @media (min-width: 650px) {
+    .icecreams-img-container {
+        width: 600px;
+    }
+
     .strawberry-icecreams, .salted-caramel-icecreams {
+        text-align: center;
         float: left;
         padding: 0.5em;
     }
@@ -495,8 +502,16 @@ main:after {
 }
 
 @media (min-width: 900px) {
-    .strawberry-icecreams img, .salted-caramel-icecreams img {
-        width: 370px;
+    .icecreams {
+        height: 780px;
+    }
+
+    .icecreams-img-container {
+        width: 650px;
+    }
+
+    .vanilla-icecreams img, .chocolate-icecreams img, .redvelvet-icecreams img, .pistaschio-icecreams img, .strawberry-icecreams img, .salted-caramel-icecreams img {
+        width: 290px;
     }
 }
 
