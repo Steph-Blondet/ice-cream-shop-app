@@ -1,19 +1,23 @@
+/*=======================*/
 /****** BASE STYLES ******/
+/*=======================*/
 * {
     margin: 0;
 }
 
 body {
     font-family: 'Muli', sans-serif;
+    height: 100%;
 }
 
 main {
-    /*height: 600px;*/
-    margin-bottom: -2.7em;
+    margin: 0;
 }
 
 
-/****** NAVBAR ******/
+/*=======================*/
+/******** NAVBAR ********/
+/*=====================*/
 .full-navbar {
     background-color: black;
     text-align: center;
@@ -80,7 +84,6 @@ main {
         font-size: 0.7em;
         height: 2.5em;
         padding: 2em 0.8em 0.8em 2em;
-
     }
 
     .half-navbar-left {
@@ -113,7 +116,9 @@ main {
 }
 
 
-/****** MAIN SECTION ******/
+/*=======================*/
+/******* HOMEPAGE *******/
+/*======================*/
 
 /** Escream Front **/
 .escream-front {
@@ -150,7 +155,7 @@ main {
 
 @media (min-width: 900px) {
     .escream-front {
-        height: 620px;
+        height: 650px;
         background-size: 220px;
     }
 
@@ -284,15 +289,12 @@ h1 {
     background-color: #FFDC66;
     padding: 0.8em;
     height: 850px;
-    /*text-align: center;
-    margin: 0 auto;*/
 }
 
 .icecreams-img-container {
     margin: 0 auto;
     text-align: center;
 }
-
 
 .vanilla-icecreams img, .chocolate-icecreams img, .redvelvet-icecreams img, .pistaschio-icecreams img {
     width: 170px;
@@ -327,18 +329,11 @@ h1 {
 
     }
 
-    /*.vanilla-icecreams, .chocolate-icecreams, .redvelvet-icecreams, .pistaschio-icecreams {
-        padding: 2em;
-        margin: 0 auto;
-    }*/
-
     .vanilla-icecreams img, .chocolate-icecreams img, .redvelvet-icecreams img, .pistaschio-icecreams img {
         float: left;
         width: 290px;
-        /*text-align: center;*/
         margin: 0 1em;
         padding: 1em;
-        /*display: block;*/
     }
 
     .flavors-p {
@@ -356,7 +351,6 @@ h1 {
 
 @media (min-width: 900px) {
     .icecreams {
-        /*padding: 0.8em;*/
         height: 900px;
     }
 
@@ -364,7 +358,6 @@ h1 {
       width: 900px;
       margin: 0 auto;
       text-align: center;
-      /*display: inline-block;*/
   }
 
     .vanilla-icecreams img, .chocolate-icecreams img, .redvelvet-icecreams img, .pistaschio-icecreams img {
@@ -373,9 +366,7 @@ h1 {
     }
 
     .flavors-p {
-        /*text-align: center;*/
         width: 600px;
-        /*margin: 0 auto;*/
         display: block;
     }
 
@@ -412,6 +403,7 @@ h1 {
     }
 }
 
+
 @media (min-width: 900px) {
     .location {
         height: 740px;
@@ -426,8 +418,10 @@ h1 {
     }
 }
 
+/*=======================*/
+/******** FOOTER ********/
+/*=====================*/
 
-/****** FOOTER ******/
 footer {
     background-color: black;
     color: white;
@@ -452,10 +446,14 @@ main:after {
 }
 
 
-
+/*=======================*/
 /****** USER PAGES ******/
+/*=======================*/
 
+
+/*==========================*/
 /*** User New - Register ***/
+/*========================*/
 
 .register-page {
     background-color: #D7769B;
@@ -506,12 +504,12 @@ input {
 
 @media (min-width: 650px) {
     .form-container {
-        width: 30em;
+        width: 28em;
     }
 
     input {
       width: 30em;
-      /*padding: 0.5em 1em;*/
+      padding: 0.5em;
       font-size: 0.8em;
     }
 
@@ -521,8 +519,9 @@ input {
     }
 }
 
-
+/*=====================*/
 /*** SHOW USER PAGE ***/
+/*===================*/
 .show-user-page {
     background-color: #FFDC66;
 }
@@ -585,8 +584,9 @@ input {
     }
 }
 
-
+/*=====================*/
 /*** EDIT USER PAGE ***/
+/*===================*/
 #edit-user {
     margin: 4%;
     width: 14em;
@@ -600,10 +600,13 @@ input {
 
 
 
-
+/*===========================*/
 /****** SESSIONS PAGES ******/
+/*=========================*/
 
+/*=======================*/
 /*** User New - Login ***/
+/*=======================*/
 .login-page {
     background-color: #98F5D5;
     color: white;
@@ -623,12 +626,13 @@ input {
 }
 
 
-
-
-
+/*=============================*/
 /****** ICE CREAMS PAGES ******/
+/*===========================*/
 
+/*=================*/
 /*** INDEX PAGE ***/
+/*===============*/
 
 /** Main **/
 .icecreams-index {
@@ -685,26 +689,16 @@ input {
 
 
 @media (min-width: 650px) {
-    /*.icecreams-img-container {
-        width: 600px;
-    }*/
-
     .strawberry-icecreams img, .salted-caramel-icecreams img {
         float: left;
         width: 290px;
-        /*text-align: center;*/
         margin: 0 1em;
         padding: 1em;
-        /*display: block;*/
     }
 
 }
 
 @media (min-width: 900px) {
-    /*.icecreams {
-        height: 780px;
-    }*/
-
     .flavors-img-container {
         width: 900px;
     }
@@ -713,7 +707,6 @@ input {
         width: 320px;
         float: left;
         margin: 0 2em;
-        /*padding: 2em;*/
     }
 }
 
@@ -725,7 +718,6 @@ input {
     display: block;
     padding-top: 0.5em;
 }
-
 
 .add-button a {
     background-color: #D7769B;
@@ -767,6 +759,7 @@ input {
     text-align: center;
 }
 
+
 @media (min-width: 650px) {
     .add-button a, .add-button a:hover {
         padding: 1em 2em;
@@ -779,6 +772,7 @@ input {
         font-size: 1.5em;
     }
 }
+
 
 @media (min-width: 900px) {
     .add-button a, .add-button a:hover {
@@ -793,8 +787,9 @@ input {
     }
 }
 
-
+/*======================*/
 /*** ADD NEW IC PAGE ***/
+/*====================*/
 
 .add-icecream-page {
     background-color: #4B7BD7;
@@ -836,7 +831,6 @@ select {
     }
 
     #add-ic-button {
-        /*margin: 3em;*/
     }
 }
 
@@ -847,8 +841,9 @@ select {
     }
 }
 
-
+/*===================*/
 /*** SHOW IC PAGE ***/
+/*=================*/
 
 .show-ic-page {
     background-color: #98F5D5;
