@@ -525,6 +525,73 @@ input {
 }
 
 
+/*** SHOW USER PAGE ***/
+.show-user-page {
+    background-color: #FFDC66;
+}
+
+#show-user-cont {
+    background-color: #D7769B;
+    width: 20em;
+}
+
+#show-user-h1 {
+    color: #4B7BD7;
+}
+
+#show-user-h2 {
+    color: white;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+#add-ic-user-page {
+    background-color: #4B7BD7;
+}
+
+#add-ic-user-page:hover {
+    background-color: #726E6C;
+
+}
+
+.p-text {
+    list-style-type: none;
+
+}
+
+.ul-show-user {
+    padding: 0;
+    text-align: center;
+}
+
+.p-text a {
+    text-decoration: none;
+    color: white;
+    /*font-size: 0.8em;*/
+}
+
+.p-text a:hover {
+    color: lightgrey;
+}
+
+@media (min-width: 650px) {
+    #show-user-cont {
+        width: 35em;
+    }
+
+    #show-user-h2 {
+        font-size: 2em;
+    }
+
+    #delete-ic {
+        width: 35em;
+    }
+}
+
+
+
+
+
 /****** SESSIONS PAGES ******/
 
 /*** User New - Login ***/
@@ -757,14 +824,14 @@ select {
 }
 
 .h2-show-ic {
-    color: white;
+    color: black;
     padding: 0.5em;
     text-align: center;
     margin: 0 auto;
     padding-bottom: 1em;
 }
 
-.back-ic, .edit-ic {
+.page-link, .page-link {
     font-size: 0.8em;
     background-color: #FFAAB8;
     border: none;
@@ -774,12 +841,12 @@ select {
     text-align: center;
 }
 
-.back-ic:hover, .edit-ic:hover {
+.page-link:hover, .page-link:hover {
     background-color: #99898E;
 
 }
 
-.back-ic a, .edit-ic a {
+.page-link a, .page-link a {
     text-decoration: none;
     color: white;
     font-size: 1.3em;

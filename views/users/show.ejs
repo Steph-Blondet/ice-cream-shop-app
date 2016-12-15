@@ -10,7 +10,7 @@
         <!-- viewport -->
         <meta name="viewport" content="width=device-width,initial-scale=1">
     </head>
-    <body>
+    <body class="show-user-page">
 
         <header>
             <div class="full-navbar">
@@ -28,33 +28,38 @@
         </header>
 
         <main>
-            <section>
-                <h1>Hello <%=user.username%>!</h1>
-                <p><a href="/users/<%=user._id%>/edit">Edit User Profile</a></p>
-            </section>
+            <h1 class="tittle" id="show-user-h1">Hello <%=user.username%>!</h1>
 
-            <section>
-                <h1><%=user.username%>'s Ice Cream Creations</h1>
-                <p><a href="../icecreams/new">Add Ice Cream</a></p>
-            </section>
+            <div class="form-container" id="show-user-cont">
+                <section>
+                    <p class="page-link"><a href="/icecreams">Back to Ice Creams</a></p>
+                    <p class="page-link"><a href="/users/<%=user._id%>/edit">Edit User Profile</a></p>
+                </section>
 
-            <section>
-                <ul>
-                    <% for(var i = 0; i < user.icecreams.length; i++){ %>
-                        <li><a href="/icecreams/<%=user.icecreams[i].id%>"><%=user.icecreams[i].nameOfCreation%></a></li>
-                    <% } %>
-                </ul>
-            </section>
+                <section>
+                    <h2 id="show-user-h2"><%=user.username%>'s Ice Cream Creations</h2>
+                    <p class="page-link" id="add-ic-user-page"><a href="../icecreams/new">Add Ice Cream</a></p>
+                </section>
 
-            <section>
-                <form action="/users/<%=user._id%>?_method=DELETE" method="POST">
-                    <input type="submit" value="Delete User">
-                </form>
+                <section>
+                    <ul class="ul-show-user">
+                        <% for(var i = 0; i < user.icecreams.length; i++){ %>
+                            <li class="p-text"><a href="/icecreams/<%=user.icecreams[i].id%>"><%=user.icecreams[i].nameOfCreation%></a></li>
+                        <% } %>
+                    </ul>
+                </section>
 
-                <form action="/sessions?_method=DELETE" method="POST">
-                     <input type="submit" value="Logout">
-                </form>
-            </section>
+                <section>
+                    <form action="/users/<%=user._id%>?_method=DELETE" method="POST">
+                        <input class="button" id="delete-ic" class="delete-user" type="submit" value="Delete User">
+                    </form>
+
+                    <form action="/sessions?_method=DELETE" method="POST">
+                         <input class="button" id="delete-ic" type="submit" value="Logout">
+                    </form>
+                </section>
+            </div>
+
         </main>
 
         <!-- including ejs template for footer -->
