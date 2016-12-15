@@ -97,7 +97,7 @@ main {
         margin: 0.3em;
     }
 
-    .login-button, .register-button {
+    .login-button, .button {
         margin: 0.1em;
         display: inline;
     }
@@ -456,7 +456,7 @@ main:after {
 
 
 
-/****** USERS PAGES ******/
+/****** USER PAGES ******/
 
 /*** User New - Register ***/
 
@@ -465,7 +465,7 @@ main:after {
     color: white;
 }
 
-.register-tittle {
+.tittle {
     letter-spacing: 1.2px;
     padding: 0.8em;
 }
@@ -479,7 +479,7 @@ main:after {
     border-radius: 0.5em;
 }
 
-.register-form {
+.form {
     text-align: center;
     /*padding: 1em;*/
 }
@@ -492,7 +492,7 @@ input {
   border: none;
 }
 
-.createuser-button {
+.button {
     color: #4B7BD7;
     margin: 1em;
     width: 20em;
@@ -501,7 +501,7 @@ input {
     background-color: #98F5D5;
 }
 
-.createuser-button:hover {
+.button:hover {
     background-color: #4B7BD7;
     color: white;
 }
@@ -518,14 +518,39 @@ input {
       font-size: 0.8em;
     }
 
-    .createuser-button {
+    .button {
         width: 32em;
         border: none;
     }
 }
 
 
-/****** ICECREAMS PAGES ******/
+/****** SESSIONS PAGES ******/
+
+/*** User New - Login ***/
+.login-page {
+    background-color: #98F5D5;
+    color: white;
+}
+
+#login {
+    background-color: #D7769B;
+    color: white;
+}
+
+#login-button {
+    background-color: #FFDC66;
+}
+
+#login-button:hover {
+    background-color: #4B7BD7;
+}
+
+
+
+
+
+/****** ICE CREAMS PAGES ******/
 
 /*** INDEX PAGE ***/
 
