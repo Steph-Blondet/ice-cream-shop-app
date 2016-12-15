@@ -117,42 +117,31 @@ main {
 .escream-front {
     background-color: #98F5D5;
     height: 300px;
-    /*margin: auto;*/
     padding: 0.9em;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url("../images/home/escream-homepage.png");
+    background-position: center;
+    background-size: 100px;
+    background-repeat: no-repeat;
 }
 
 .escream-logo img {
-    /*text-align: center;*/
-    /*display: inline-block;*/
     width: 240px;
-    /*position: absolute;*/
-    z-index: 5;
-}
-
-.berry-icecream img {
-    /*text-align: center;*/
-    width: 100px;
-    position: absolute;
-    z-index: 0;
 }
 
 
 @media (min-width: 650px) {
     .escream-front {
         height: 420px;
-    }
-
-    .berry-icecream img {
-        width: 150px;
+        background-size: 150px;
     }
 
     .escream-logo img {
-        width: 320px;
+        width: 380px;
     }
 }
 
@@ -160,14 +149,11 @@ main {
 @media (min-width: 900px) {
     .escream-front {
         height: 620px;
-    }
-
-    .berry-icecream img {
-        width: 230px;
+        background-size: 220px;
     }
 
     .escream-logo img {
-        width: 450px;
+        width: 490px;
     }
 }
 
@@ -315,16 +301,14 @@ h1 {
 
 .flavors-p {
     text-align: center;
+
 }
 
 .flavors-p a {
     text-align: center;
     color: #D7769B;
-    font-size: 0.8em;
     font-weight: 800;
     text-decoration: none;
-    display: block;
-    overflow: auto;
 }
 
 .flavors-p a:hover {
@@ -355,13 +339,18 @@ h1 {
         margin: 0 auto;
     }
 
+    .flavors-p {
+        display: block;
+        overflow: hidden;
+    }
+
     .flavors-p a {
         font-size: 1em;
         /*display: inline-block;*/
         /*vertical-align: middle;*/
         /*margin: 0 auto;*/
         font-size: 1em;
-        overflow: auto;
+        /*overflow: auto;*/
     }
 }
 
@@ -435,10 +424,22 @@ footer {
     color: white;
     font-size: 0.8em;
     text-align: center;
+    word-wrap: break-word;
     padding: 1.5em;
-    display: block;
+    /*display: block;*/
     height: 2.7em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
+
+/*.clearfix {
+    overflow: hidden;
+}*/
+
+/*main {
+    min-height: 100%;
+}*/
 
 main:after {
   content: "";
@@ -447,12 +448,81 @@ main:after {
 
 @media (min-width: 650px) {
     footer {
-        font-size: 1em;
-        padding: 1.2em 0 0 0;
-        height: 2.5em;
+        font-size: 0.8em;
+        /*padding: 1.2em 0 0 0;*/
+        /*height: 2.3em;*/
     }
 }
 
+
+
+/****** USERS PAGES ******/
+
+/*** User New - Register ***/
+
+.register-page {
+    background-color: #D7769B;
+    color: white;
+}
+
+.register-tittle {
+    letter-spacing: 1.2px;
+    padding: 0.8em;
+}
+
+.form-container {
+    padding: 1em;
+    width: 15em;
+    margin: 0 auto;
+    display: block;
+    background-color: gray;
+    border-radius: 0.5em;
+}
+
+.register-form {
+    text-align: center;
+    /*padding: 1em;*/
+}
+
+input {
+  text-align: center;
+  margin: 4%;
+  padding: 1em;
+  width: 18em;
+  border: none;
+}
+
+.createuser-button {
+    color: #4B7BD7;
+    margin: 1em;
+    width: 20em;
+    border: none;
+    border-radius: 12.5em;
+    background-color: #98F5D5;
+}
+
+.createuser-button:hover {
+    background-color: #4B7BD7;
+    color: white;
+}
+
+
+@media (min-width: 650px) {
+    .form-container {
+        width: 30em;
+    }
+
+    input {
+      width: 30em;
+      /*padding: 0.5em 1em;*/
+      font-size: 0.8em;
+    }
+
+    .createuser-button {
+        width: 32em;
+        border: none;
+    }
+}
 
 
 /****** ICECREAMS PAGES ******/
@@ -590,8 +660,3 @@ main:after {
         font-size: 1.7em;
     }
 }
-
-
-/*** NEW ICECREAM PAGE ***/
-
-/** Flavors **/

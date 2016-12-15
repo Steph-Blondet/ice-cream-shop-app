@@ -10,7 +10,7 @@
         <!-- viewport -->
         <meta name="viewport" content="width=device-width,initial-scale=1">
     </head>
-    <body>
+    <body class="register-page">
         <header>
             <div class="full-navbar">
                 <div class="half-navbar-left">
@@ -20,15 +20,17 @@
         </header>
 
         <main>
-            <h1>Register</h1>
+            <h1 class="register-tittle">Register</h1>
+
+            <div class="form-container">
+                <form class="register-form" action="/users" method="POST">
+                    <input type="text" name="username" value="Username"/><br/>
+                    <input type="password" name="password" value="Password"/><br/>
+                    <input class="createuser-button" type="submit" value="Create User"/>
+                </form>
+            </div>
 
 
-
-            <form action="/users" method="POST">
-                <input type="text" name="username" value="Username"/><br/>
-                <input type="password" name="password"/><br/>
-                <input type="submit" value="Create User"/>
-            </form>
         </main>
 
         <!-- including ejs template for footer -->
