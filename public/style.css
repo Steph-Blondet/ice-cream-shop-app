@@ -440,20 +440,10 @@ footer {
     text-align: center;
     word-wrap: break-word;
     padding: 1.5em;
-    /*display: block;*/
-    height: 2.7em;
-    position: fixed;
     bottom: 0;
     width: 100%;
+    margin: 0 auto;
 }
-
-/*.clearfix {
-    overflow: hidden;
-}*/
-
-/*main {
-    min-height: 100%;
-}*/
 
 main:after {
   content: "";
@@ -463,8 +453,6 @@ main:after {
 @media (min-width: 650px) {
     footer {
         font-size: 0.8em;
-        /*padding: 1.2em 0 0 0;*/
-        /*height: 2.3em;*/
     }
 }
 
@@ -676,7 +664,14 @@ input {
 
 @media (min-width: 900px) {
     .flavors-img-container {
-        width: 900px;
+        width: 1000px;
+    }
+
+    #creations-text {
+        display: block;
+        width: 600px;
+        text-align: center;
+        margin: 0 auto;
     }
 }
 
@@ -798,7 +793,7 @@ input {
 
     .icecream-creations {
         margin: 1.2em;
-        padding: 1em;
+        padding: 2em;
         font-size: 1.7em;
     }
 }
