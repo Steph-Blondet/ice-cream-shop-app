@@ -685,3 +685,57 @@ input {
         font-size: 1.7em;
     }
 }
+
+
+/*** ADD NEW IC PAGE ***/
+
+.add-icecream-page {
+    background-color: #4B7BD7;
+    color: white;
+}
+
+h3 {
+    font-size: 1em;
+    padding: 1.2em;
+}
+
+#add-ic {
+    background-color: #FFDC66;
+    color: #726E6C;
+    text-align: center;
+}
+
+#add-ic-button {
+    background-color: #726E6C;
+    color: white;
+    margin: 2em 0 0 0;
+}
+
+#add-ic-button:hover {
+    background-color: #D7769B;
+    color: white;
+
+}
+
+select {
+    width: 20em;
+    height: 3em;
+}
+
+@media (min-width: 650px) {
+    select {
+        width: 38em;
+        height: 3.5em;
+    }
+
+    #add-ic-button {
+        /*margin: 3em;*/
+    }
+}
+
+@media (min-width: 900px) {
+    h3 {
+        font-size: 1.2em;
+        padding: 1.2em;
+    }
+}
