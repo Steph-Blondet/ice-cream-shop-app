@@ -10,7 +10,7 @@
         <!-- viewport -->
         <meta name="viewport" content="width=device-width,initial-scale=1">
     </head>
-    <body>
+    <body class="add-icecream-page">
         <header>
             <div class="full-navbar">
                 <div class="half-navbar-left">
@@ -20,45 +20,49 @@
         </header>
 
         <main>
-            <h1>Edit <%=icecream.nameOfCreation%></h1>
+            <h1 class="tittle">Edit <%=icecream.nameOfCreation%></h1>
 
-            <form action="/icecreams/<%=icecream._id%>?_method=PUT" method="POST">
-                <input type="text" name="nameOfCreation" value="<%=icecream.nameOfCreation%>"/><br/>
+            <div class="form-container" id="add-ic">
+                <form action="/icecreams/<%=icecream._id%>?_method=PUT" method="POST">
+                    <input type="text" name="nameOfCreation" value="<%=icecream.nameOfCreation%>"/><br/>
 
-                <h3>Update your flavor</h3>
-                <select name="flavor">
-                    <option value="none"></option>
-                    <option value="Vanilla">Vanilla</option>
-                    <option value="Chocolate">Chocolate</option>
-                    <option value="Strawberry">Strawberry</option>
-                    <option value="Cookies and Cream">Cookies and Cream</option>
-                    <option value="Salted Caramel">Salted Caramel</option>
-                    <option value="Chocolate Chip">Chocolate Chip</option>
-                </select>
+                    <h3>Update your flavor</h3>
+                    <select class="dropdown" name="flavor">
+                        <option value="none"></option>
+                        <option value="Vanilla">Vanilla</option>
+                        <option value="Chocolate">Chocolate</option>
+                        <option value="Red Velvet">Red Velvet</option>
+                        <option value="Pistaschio">Pistaschio</option>
+                        <option value="Salted Caramel">Salted Caramel</option>
+                        <option value="Strawberry">Strawberry</option>
+                    </select>
 
-                <h3>Update your toppings</h3>
-                <select name="toppings">
-                    <option value="none"></option>
-                    <option value="Cookie Dough">Cookie Dough</option>
-                    <option value="Oreo Cookies">Oreo Cookies</option>
-                    <option value="Chocolate Chips">Chocolate Chips</option>
-                    <option value="Sprinkles">Sprinkles</option>
-                    <option value="Gummy Bears">Gummy Bears</option>
-                    <option value="Brownie">Brownie</option>
-                </select>
+                    <h3>Update your toppings</h3>
+                    <select class="dropdown" name="toppings">
+                        <option value="none"></option>
+                        <option value="Cookie Dough">Cookie Dough</option>
+                        <option value="Oreo Cookies">Oreo Cookies</option>
+                        <option value="Chocolate Chips">Chocolate Chips</option>
+                        <option value="Sprinkles">Sprinkles</option>
+                        <option value="Gummy Bears">Gummy Bears</option>
+                        <option value="Brownie">Brownie</option>
+                    </select>
 
-                <h3>Update your sauces</h3>
-                <select name="sauces">
-                    <option value="none"></option>
-                    <option value="Hot Fudge">Hot Fudge</option>
-                    <option value="Caramel Sauce">Caramel Sauce</option>
-                    <option value="Strawberry Sauce">Strawberry Sauce</option>
-                    <option value="Whipped Cream">Whipped Cream</option>
-                </select><br/>
+                    <h3>Update your sauces</h3>
+                    <select class="dropdown" name="sauces">
+                        <option value="none"></option>
+                        <option value="Hot Fudge">Hot Fudge</option>
+                        <option value="Caramel Sauce">Caramel Sauce</option>
+                        <option value="Strawberry Sauce">Strawberry Sauce</option>
+                        <option value="Whipped Cream">Whipped Cream</option>
+                    </select><br/>
 
 
-                <input type="submit" value="Update Ice Cream"/>
-            </form>
+                    <input class="button" id="add-ic-button" type="submit" value="Update Ice Cream"/>
+                </form>
+            </div>
+
+
         </main>
 
         <!-- including ejs template for footer -->
