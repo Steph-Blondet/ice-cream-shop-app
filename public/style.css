@@ -293,11 +293,6 @@ h1 {
     text-align: center;
 }
 
-/*.vanilla-icecreams, .chocolate-icecreams, .redvelvet-icecreams, .pistaschio-icecreams {
-    text-align: center;
-    padding: 0.5em;
-    margin: 0 auto;
-}*/
 
 .vanilla-icecreams img, .chocolate-icecreams img, .redvelvet-icecreams img, .pistaschio-icecreams img {
     width: 170px;
@@ -362,11 +357,11 @@ h1 {
 @media (min-width: 900px) {
     .icecreams {
         /*padding: 0.8em;*/
-        height: 800px;
+        height: 900px;
     }
 
     .icecreams-img-container {
-      width: 800px;
+      width: 900px;
       margin: 0 auto;
       text-align: center;
       /*display: inline-block;*/
@@ -379,9 +374,9 @@ h1 {
 
     .flavors-p {
         /*text-align: center;*/
-        width: 800px;
+        width: 600px;
         /*margin: 0 auto;*/
-        /*display: block;*/
+        display: block;
     }
 
     .flavors-p a {
