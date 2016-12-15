@@ -4,7 +4,7 @@ EScream is a full stack application where the user can create an account and add
 
 When the user visits the web app, they have to register and then login in order to add an ice cream to their account. Once an ice cream is created, they can see their creation in their personal profile.
 
-The user has the ability to edit, update, create and delete ice creams and they can also edit, update and delete their personal profile.
+The user has the ability to edit, update, create and delete ice creams in their profile and they can also edit, update and delete their personal profile.
 
 This full stack application is responsive so it can be viewed in different viewport sizes.
 
@@ -28,3 +28,7 @@ This full stack application is responsive so it can be viewed in different viewp
 
 ## Mobile View
 (Add picture of the web app)
+
+
+------------------------------------------
+*This full stack web application was the second project of the Full Stack Web Development Immersive Program at General Assembly. *Designed and Developed by Stephanie Blondet, December 2016.
