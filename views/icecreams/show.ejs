@@ -10,7 +10,7 @@
         <!-- viewport -->
         <meta name="viewport" content="width=device-width,initial-scale=1">
     </head>
-    <body>
+    <body class="show-ic-page">
         <header>
 
 
@@ -20,30 +20,36 @@
                 </div>
             </div>
 
-            <h1>Ice Cream</h1>
+            <h1 class="tittle" id="show-ic-h1">Ice Cream</h1>
 
         </header>
 
         <main>
 
-            <section>
-                <h1>Name of Creation: <%=icecream.nameOfCreation%></h1>
-                <p><a href="/icecreams">Back to Ice Creams</a></p>
+            <div  class="form-container" id="show-ic-cont">
+                <section>
+                    <h2 class="h2-show-ic">Name of Creation: <%=icecream.nameOfCreation%></h2>
+                    <p class="back-ic"><a href="/icecreams">Back to Ice Creams</a></p>
 
-                <p>Flavor: <%=icecream.flavor%></p>
-                <p>Topping: <%=icecream.toppings%></p>
-                <p>Sauces: <%=icecream.sauces%></p>
-                <p>Creator: <a href="/users/<%=user._id%>"><%=user.username%></a></p>
+                    <div class="p-show">
+                        <p class="p-text"><b>Flavor:</b>    <%=icecream.flavor%></p>
+                        <p class="p-text"><b>Topping:</b> <%=icecream.toppings%></p>
+                        <p class="p-text"><b>Sauces:</b> <%=icecream.sauces%></p>
+                        <p class="p-text"><b>Creator:</b> <a href="/users/<%=user._id%>"><%=user.username%></a></p>
+                    </div>
 
-                <p><a href="/icecreams/<%=icecream._id%>/edit">Edit Ice Cream</a></p>
-            </section>
+
+                    <p class="edit-ic"><a href="/icecreams/<%=icecream._id%>/edit">Edit Ice Cream</a></p>
+                </section>
 
 
-            <section>
-                <form action="/icecreams/<%=icecream._id%>?_method=DELETE" method="POST">
-                    <input type="submit" value="Delete Ice Cream">
-                </form>
-            </section>
+                <section>
+                    <form action="/icecreams/<%=icecream._id%>?_method=DELETE" method="POST">
+                        <input class="button" id="delete-ic" type="submit" value="Delete Ice Cream">
+                    </form>
+                </section>
+            </div>
+
 
         </main>
 

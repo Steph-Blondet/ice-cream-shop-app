@@ -8,7 +8,7 @@ STYLE (CSS) PLAN:
 
 2. Design the ice cream index.ejs (all ice creams displaying) [X]
 3. Design the ice cream new page (form) [X]
-4. Design the ice cream show page (images)
+4. Design the ice cream show page (form) [X]
 5. Design the ice cream edit page (form)
 
 6. Design the user index.ejs (welcome page with 2 links) ??

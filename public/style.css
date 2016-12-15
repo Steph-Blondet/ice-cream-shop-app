@@ -739,3 +739,93 @@ select {
         padding: 1.2em;
     }
 }
+
+
+/*** SHOW IC PAGE ***/
+
+.show-ic-page {
+    background-color: #98F5D5;
+}
+
+#show-ic-h1 {
+    color: #D7769B;
+}
+
+#show-ic-cont {
+    background-color: #D7769B;
+    width: 20em;
+}
+
+.h2-show-ic {
+    color: white;
+    padding: 0.5em;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 1em;
+}
+
+.back-ic, .edit-ic {
+    font-size: 0.8em;
+    background-color: #FFAAB8;
+    border: none;
+    border-radius: 0.3em;
+    padding: 0.5em 1.5em;
+    margin: 1em auto;
+    text-align: center;
+}
+
+.back-ic:hover, .edit-ic:hover {
+    background-color: #99898E;
+
+}
+
+.back-ic a, .edit-ic a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3em;
+}
+
+.p-show {
+    color: white;
+    padding: 1em;
+}
+
+.p-show a {
+    color: black;
+}
+
+.p-show a:hover {
+    color: grey;
+}
+
+.p-text {
+    padding: 0.4em;
+    font-size: 1.2em;
+}
+
+#delete-ic {
+    width: 20em;
+    margin: 1em auto;
+    color: white;
+    background-color: #4B7BD7;
+    font-size: 1em;
+}
+
+#delete-ic:hover {
+    background-color: #99898E;
+}
+
+
+@media (min-width: 650px) {
+    #show-ic-cont {
+        width: 35em;
+    }
+
+    .h2-show-ic {
+        font-size: 2em;
+    }
+
+    #delete-ic {
+        width: 35em;
+    }
+}
