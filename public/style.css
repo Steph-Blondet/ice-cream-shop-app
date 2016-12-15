@@ -10,9 +10,9 @@ body {
     height: 100%;
 }
 
-main {
+/*main {
     margin: 0;
-}
+}*/
 
 
 /*=======================*/
@@ -25,6 +25,7 @@ main {
     padding: 0.5em;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    /*width: 100%;*/
 }
 
 .full-navbar ul {
@@ -430,7 +431,6 @@ footer {
     word-wrap: break-word;
     padding: 1.5em;
     bottom: 0;
-    width: 100%;
     margin: 0 auto;
 }
 
