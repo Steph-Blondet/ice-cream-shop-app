@@ -284,6 +284,8 @@ h1 {
     background-color: #FFDC66;
     padding: 0.8em;
     height: 850px;
+    /*text-align: center;
+    margin: 0 auto;*/
 }
 
 .icecreams-img-container {
@@ -291,26 +293,28 @@ h1 {
     text-align: center;
 }
 
-.vanilla-icecreams, .chocolate-icecreams, .redvelvet-icecreams, .pistaschio-icecreams {
+/*.vanilla-icecreams, .chocolate-icecreams, .redvelvet-icecreams, .pistaschio-icecreams {
+    text-align: center;
+    padding: 0.5em;
+    margin: 0 auto;
+}*/
+
+.vanilla-icecreams img, .chocolate-icecreams img, .redvelvet-icecreams img, .pistaschio-icecreams img {
+    width: 170px;
     text-align: center;
     padding: 0.5em;
     margin: 0 auto;
 }
 
-.vanilla-icecreams img, .chocolate-icecreams img, .redvelvet-icecreams img, .pistaschio-icecreams img {
-    width: 170px;
-}
-
 .flavors-p {
     text-align: center;
-
 }
 
 .flavors-p a {
-    text-align: center;
     color: #D7769B;
     font-weight: 800;
     text-decoration: none;
+    margin: 0 auto;
 }
 
 .flavors-p a:hover {
@@ -320,60 +324,69 @@ h1 {
 
 @media (min-width: 650px) {
     .icecreams {
-        padding: 0.8em;
-        height: 750px;
+        height: 800px;
     }
 
     .icecreams-img-container {
-        width: 600px;
-        margin: 0 auto;
-        text-align: center;
+        width: 900px;
+
     }
 
-    .vanilla-icecreams, .chocolate-icecreams, .redvelvet-icecreams, .pistaschio-icecreams {
-        float: left;
-        padding: 0.5em;
-    }
+    /*.vanilla-icecreams, .chocolate-icecreams, .redvelvet-icecreams, .pistaschio-icecreams {
+        padding: 2em;
+        margin: 0 auto;
+    }*/
 
     .vanilla-icecreams img, .chocolate-icecreams img, .redvelvet-icecreams img, .pistaschio-icecreams img {
-        width: 280px;
-        text-align: center;
-        margin: 0 auto;
+        float: left;
+        width: 290px;
+        /*text-align: center;*/
+        margin: 0 1em;
+        padding: 1em;
+        /*display: block;*/
     }
 
     .flavors-p {
+        text-align: center;
+        width: 700px;
+        margin: 0 auto;
         display: block;
-        overflow: hidden;
     }
 
     .flavors-p a {
-        font-size: 1em;
-        /*display: inline-block;*/
-        /*vertical-align: middle;*/
-        /*margin: 0 auto;*/
-        font-size: 1em;
-        /*overflow: auto;*/
+        font-size: 1.3em;
     }
 }
 
 
 @media (min-width: 900px) {
     .icecreams {
-        padding: 0.8em;
-        height: 950px;
+        /*padding: 0.8em;*/
+        height: 1200px;
     }
 
     .icecreams-img-container {
-        width: 800px;
-    }
+      width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      /*display: inline-block;*/
+  }
 
     .vanilla-icecreams img, .chocolate-icecreams img, .redvelvet-icecreams img, .pistaschio-icecreams img {
         width: 370px;
+        margin: 0 2em;
+    }
+
+    .flavors-p {
+        /*text-align: center;*/
+        width: 800px;
+        /*margin: 0 auto;*/
+        /*display: block;*/
     }
 
     .flavors-p a {
         font-size: 1.5em;
-        display: block;
+        /*display: inline-block;*/
     }
 }
 
@@ -400,12 +413,12 @@ h1 {
     }
 
     .square-placeholder {
-        width: 400px;
-        height: 400px;
+        width: 500px;
+        height: 350px;
     }
 }
 
-@media (min-width: 650px) {
+@media (min-width: 900px) {
     .location {
         height: 740px;
         font-size: 1.2em;
@@ -662,9 +675,9 @@ input {
 
 
 @media (min-width: 650px) {
-    .icecreams-img-container {
+    /*.icecreams-img-container {
         width: 600px;
-    }
+    }*/
 
     .strawberry-icecreams, .salted-caramel-icecreams {
         text-align: center;
@@ -682,9 +695,9 @@ input {
         height: 780px;
     }
 
-    .icecreams-img-container {
+    /*.icecreams-img-container {
         width: 650px;
-    }
+    }*/
 
     .vanilla-icecreams img, .chocolate-icecreams img, .redvelvet-icecreams img, .pistaschio-icecreams img, .strawberry-icecreams img, .salted-caramel-icecreams img {
         width: 290px;
