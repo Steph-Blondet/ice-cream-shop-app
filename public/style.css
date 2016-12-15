@@ -589,6 +589,18 @@ input {
 }
 
 
+/*** EDIT USER PAGE ***/
+#edit-user {
+    margin: 4%;
+    width: 14em;
+}
+
+@media (min-width: 650px) {
+    #edit-user {
+        width: 29em;
+    }
+}
+
 
 
 
