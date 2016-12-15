@@ -63,6 +63,7 @@ main {
 .login-button, .register-button {
     padding: 0.5em;
     margin: 0.2em;
+
 }
 
 .login-button a {
@@ -79,6 +80,7 @@ main {
         font-size: 0.7em;
         height: 2.5em;
         padding: 2em 0.8em 0.8em 2em;
+
     }
 
     .half-navbar-left {
@@ -97,7 +99,7 @@ main {
         margin: 0.3em;
     }
 
-    .login-button, .button {
+    .login-button, .register-button {
         margin: 0.1em;
         display: inline;
     }
@@ -612,16 +614,16 @@ input {
     color: white;
 }
 
-#login {
+#log {
     background-color: #D7769B;
     color: white;
 }
 
-#login-button {
+#log-button {
     background-color: #FFDC66;
 }
 
-#login-button:hover {
+#log-button:hover {
     background-color: #4B7BD7;
 }
 
