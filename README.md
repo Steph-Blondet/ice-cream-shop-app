@@ -25,6 +25,7 @@ This full stack application is responsive so it can be viewed in different viewp
 - Add Google Maps to the location section on the index page
 - The ability to add an ice cream only when the user is logged in and remove the 'Add ice cream' button from the 'Ice Creams' page so only registered users can create ice creams
 - Have the 'New Ice Creams' page read who is logged in and automatically add that new ice cream to that specific user. Remove the 'Find your user name' dropdown menu from this page after this has been completed.
+- Add footer on pages with forms
 
 ## Mobile View
 (Add picture of the web app)
