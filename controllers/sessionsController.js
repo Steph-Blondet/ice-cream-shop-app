@@ -27,7 +27,6 @@ router.post('/', function(req, res) {
         }
     });
 }); //--> ok
-//--> ok CL foundUser and req.body, if the PS is there evealuate user query(foundUser check)/ != send wp, else redirect IC / just find
 
 
 // DELETE (LOGOUT) ROUTE
@@ -54,4 +53,4 @@ module.exports = router;
 //             res.send('wrong password');
 //         }
 //     });
-// }); //--> ok
+// }); CL foundUser and req.body, if the PS is there evealuate user query(foundUser check)/ != send wp, else redirect IC / just find
