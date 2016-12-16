@@ -27,6 +27,10 @@ This full stack application is responsive so it can be viewed in different viewp
 - Have the 'New Ice Creams' page read who is logged in and automatically add that new ice cream to that specific user. Remove the 'Find your user name' dropdown menu from this page after this has been completed.
 - Add footer on pages with forms
 
+## Bugs
+- Fix the logout button
+- Fix wrong password in login page 
+
 ## Mobile View
 (Add picture of the web app)
 

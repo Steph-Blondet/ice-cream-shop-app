@@ -18,7 +18,7 @@ router.get('/new', function(req, res) {
 // POST ROUTE
 // LOGIN: When clicking 'login' in the '/sessions/new'
 router.post('/', function(req, res) {
-    User.find({ username: req.body.username }, function(err, foundUser) {
+    User.findOne({ username: req.body.username }, function(err, foundUser) {
         if (req.body.password == foundUser.password) {
             req.session.currentuser = foundUser;
                 res.redirect('/icecreams');
@@ -26,7 +26,8 @@ router.post('/', function(req, res) {
             res.send('wrong password');
         }
     });
-}); //--> ok CL foundUser and req.body, if the PS is there evealuate user query(foundUser check)/ != send wp, else redirect IC / just find
+}); //--> ok
+//--> ok CL foundUser and req.body, if the PS is there evealuate user query(foundUser check)/ != send wp, else redirect IC / just find
 
 
 // DELETE (LOGOUT) ROUTE
