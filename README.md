@@ -29,10 +29,10 @@ This full stack application is responsive so it can be viewed in different viewp
 
 ## Bugs
 - Fix the logout button
-- Fix wrong password in login page 
+- Fix wrong password in login page
 
 ## Mobile View
-(Add picture of the web app)
+![EScream app mobile view](user-stories-and-wireframe/escream-mobile-design.png "EScream app mobile view")
 
 
 ------------------------------------------
