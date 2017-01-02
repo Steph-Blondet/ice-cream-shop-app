@@ -31,8 +31,8 @@ This full stack application is responsive so it can be viewed in different viewp
 - Add footer on pages with forms
 
 ## Bugs
-~~- Fix the logout button~~
-~~- Fix wrong password in login page~~
+~~- Fix the logout button
+- Fix wrong password in login page~~
 
 
 ------------------------------------------
