@@ -20,6 +20,9 @@ This full stack application is responsive so it can be viewed in different viewp
 - Heroku for deployment
 - HTML, CSS and JS
 
+## Mobile View
+![EScream app mobile view](user-stories-and-wireframe/escream-mobile-design.png "EScream app mobile view")
+
 ## Future Features
 - Add password encryption
 - Add Google Maps to the location section on the index page
@@ -28,11 +31,8 @@ This full stack application is responsive so it can be viewed in different viewp
 - Add footer on pages with forms
 
 ## Bugs
-- Fix the logout button
-- Fix wrong password in login page
-
-## Mobile View
-![EScream app mobile view](user-stories-and-wireframe/escream-mobile-design.png "EScream app mobile view")
+~~- Fix the logout button~~
+~~- Fix wrong password in login page~~
 
 
 ------------------------------------------
