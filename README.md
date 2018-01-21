@@ -24,12 +24,10 @@ This full stack application is responsive so it can be viewed in different viewp
 ![EScream app mobile view](user-stories-and-wireframe/escream-mobile-design.png "EScream app mobile view")
 
 ## Future Features
-- Add npm live-server for development
-- Add Bootstrap grid layout
-- Add Leaflet map in location area
 - Add password encryption
 - The ability to add an ice cream only when the user is logged in and remove the 'Add ice cream' button from the 'Ice Creams' page so only registered users can create ice creams
 - Have the 'New Ice Creams' page read who is logged in and automatically add that new ice cream to that specific user. Remove the 'Find your user name' dropdown menu from this page after this has been completed.
+- Add Google maps in the location section
 - Add footer on pages with forms
 
 ## Bugs
